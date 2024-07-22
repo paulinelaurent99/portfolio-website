@@ -1,333 +1,333 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<base href="https://marijnbransen1998.github.io/portfolio-pauline/">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Connect with Pauline Laurent | Visionary Influencer &amp; PR Strategist</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap');
+  <base href="https://paulinelaurent.com/#contact">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connect with Pauline Laurent | Visionary Influencer & PR Strategist</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap');
 
-  :root {
-    --primary: #2C2C2C;
-    --secondary: #F5F5DC;
-    --accent: #8B7D6B;
-    --bg: #FFFFFF;
-    --text: #2C2C2C;
-    --text-shadow: 0 0 10px rgba(139, 125, 107, 0.7);
-    --button-bg: #E6DED1;
-    --button-text: #4A4A4A;
-  }
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: var(--bg);
-    color: var(--text);
-    overflow-x: hidden;
-  }
-
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    position: relative;
-    z-index: 1;
-  }
-
-  header {
-    background-color: rgba(255, 255, 255, 0.9);
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    transition: background-color 0.3s ease;
-  }
-
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-  }
-
-  .logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    color: var(--primary);
-    text-decoration: none;
-    text-shadow: var(--text-shadow);
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 30px;
-  }
-
-  .nav-links a {
-    color: var(--primary);
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.1rem;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-  }
-
-  .nav-links a:hover {
-    color: var(--accent);
-    text-shadow: 0 0 10px var(--accent);
-  }
-
-  .connect-section {
-    padding: 150px 0 100px;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .connect-content {
-    text-align: center;
-    max-width: 800px;
-    position: relative;
-    z-index: 2;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .connect-content:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-  }
-
-  .connect-content h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.5rem;
-    margin-bottom: 30px;
-    text-shadow: var(--text-shadow);
-    color: var(--primary);
-    animation: fadeInUp 1s ease;
-  }
-
-  .connect-content p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin-bottom: 30px;
-    color: var(--primary);
-    animation: fadeInUp 1s ease 0.2s;
-    animation-fill-mode: both;
-  }
-
-  .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    margin-top: 50px;
-  }
-
-  .social-link-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    animation: fadeInUp 1s ease 0.4s;
-    animation-fill-mode: both;
-  }
-
-  .social-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: var(--accent);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .social-link:hover {
-    transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 15px 30px rgba(139, 125, 107, 0.4);
-  }
-
-  .social-icon {
-    width: 60px;
-    height: 60px;
-    position: relative;
-    z-index: 1;
-    transition: transform 0.3s ease;
-  }
-
-  .social-link:hover .social-icon {
-    transform: rotate(360deg);
-  }
-
-  .connect-btn {
-    padding: 15px 30px;
-    background-color: var(--button-bg);
-    color: var(--button-text);
-    border: none;
-    border-radius: 30px;
-    font-weight: 700;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .connect-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      120deg,
-      transparent,
-      rgba(255, 255, 255, 0.3),
-      transparent
-    );
-    transition: all 0.6s;
-  }
-
-  .connect-btn:hover::before {
-    left: 100%;
-  }
-
-  .connect-btn:hover {
-    background-color: var(--accent);
-    color: var(--bg);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-  }
-
-  #animated-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-  }
-
-  .floating-element {
-    position: absolute;
-    opacity: 0.7;
-    pointer-events: none;
-  }
-
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
+    :root {
+      --primary: #2C2C2C;
+      --secondary: #F5F5DC;
+      --accent: #8B7D6B;
+      --bg: #FFFFFF;
+      --text: #2C2C2C;
+      --text-shadow: 0 0 10px rgba(139, 125, 107, 0.7);
+      --button-bg: #E6DED1;
+      --button-text: #4A4A4A;
     }
-    to {
-      opacity: 1;
-      transform: translateY(0);
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-  }
 
-  .testimonial {
-    margin-top: 50px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    animation: fadeInUp 1s ease 0.6s;
-    animation-fill-mode: both;
-  }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+    }
 
-  .testimonial q {
-    font-style: italic;
-    font-size: 1.1rem;
-    color: var(--primary);
-  }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      position: relative;
+      z-index: 1;
+    }
 
-  .testimonial p {
-    margin-top: 10px;
-    font-weight: 700;
-    color: var(--accent);
-  }
+    header {
+      background-color: rgba(255, 255, 255, 0.9);
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+      transition: background-color 0.3s ease;
+    }
 
-  .awards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
-    animation: fadeInUp 1s ease 0.8s;
-    animation-fill-mode: both;
-  }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
 
-  .award {
-    width: 80px;
-    height: 80px;
-    background-color: var(--accent);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    color: var(--bg);
-    transition: transform 0.3s ease;
-  }
-
-  .award:hover {
-    transform: scale(1.1);
-  }
-
-  @media (max-width: 768px) {
-    .connect-content h2 {
+    .logo {
+      font-family: 'Playfair Display', serif;
       font-size: 2.5rem;
+      color: var(--primary);
+      text-decoration: none;
+      text-shadow: var(--text-shadow);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+      text-shadow: 0 0 10px var(--accent);
+    }
+
+    .connect-section {
+      padding: 150px 0 100px;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .connect-content {
+      text-align: center;
+      max-width: 800px;
+      position: relative;
+      z-index: 2;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .connect-content:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .connect-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      margin-bottom: 30px;
+      text-shadow: var(--text-shadow);
+      color: var(--primary);
+      animation: fadeInUp 1s ease;
     }
 
     .connect-content p {
-      font-size: 1rem;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin-bottom: 30px;
+      color: var(--primary);
+      animation: fadeInUp 1s ease 0.2s;
+      animation-fill-mode: both;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      margin-top: 50px;
+    }
+
+    .social-link-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      animation: fadeInUp 1s ease 0.4s;
+      animation-fill-mode: both;
     }
 
     .social-link {
-      width: 80px;
-      height: 80px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: var(--accent);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .social-link:hover {
+      transform: translateY(-5px) scale(1.1);
+      box-shadow: 0 15px 30px rgba(139, 125, 107, 0.4);
     }
 
     .social-icon {
-      width: 50px;
-      height: 50px;
+      width: 60px;
+      height: 60px;
+      position: relative;
+      z-index: 1;
+      transition: transform 0.3s ease;
+    }
+
+    .social-link:hover .social-icon {
+      transform: rotate(360deg);
     }
 
     .connect-btn {
-      padding: 12px 24px;
-      font-size: 1rem;
+      padding: 15px 30px;
+      background-color: var(--button-bg);
+      color: var(--button-text);
+      border: none;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .connect-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+      );
+      transition: all 0.6s;
+    }
+
+    .connect-btn:hover::before {
+      left: 100%;
+    }
+
+    .connect-btn:hover {
+      background-color: var(--accent);
+      color: var(--bg);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    #animated-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .floating-element {
+      position: absolute;
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .testimonial {
+      margin-top: 50px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      animation: fadeInUp 1s ease 0.6s;
+      animation-fill-mode: both;
+    }
+
+    .testimonial q {
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--primary);
+    }
+
+    .testimonial p {
+      margin-top: 10px;
+      font-weight: 700;
+      color: var(--accent);
     }
 
     .awards {
-      flex-wrap: wrap;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+      animation: fadeInUp 1s ease 0.8s;
+      animation-fill-mode: both;
     }
-  }
-</style>
+
+    .award {
+      width: 80px;
+      height: 80px;
+      background-color: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: var(--bg);
+      transition: transform 0.3s ease;
+    }
+
+    .award:hover {
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+      .connect-content h2 {
+        font-size: 2.5rem;
+      }
+
+      .connect-content p {
+        font-size: 1rem;
+      }
+
+      .social-link {
+        width: 80px;
+        height: 80px;
+      }
+
+      .social-icon {
+        width: 50px;
+        height: 50px;
+      }
+
+      .connect-btn {
+        padding: 12px 24px;
+        font-size: 1rem;
+      }
+
+      .awards {
+        flex-wrap: wrap;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
     <nav class="container">
-      <a href="#" class="logo">PL</a>
+      <a href="/" class="logo">PL</a>
       <div class="nav-links">
-        <a href="#portfolio">Portfolio</a>
-        <a href="#about">About</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#connect">Connect</a>
+        <a href="/#portfolio">Portfolio</a>
+        <a href="/#about">About</a>
+        <a href="/#testimonials">Testimonials</a>
+        <a href="/#contact">Connect</a>
       </div>
     </nav>
   </header>
@@ -357,10 +357,6 @@
               </a>
               <button class="connect-btn">Connect on LinkedIn</button>
             </div>
-          </div>
-          <div>
-          </div>
-          <div>
           </div>
         </div>
       </div>
