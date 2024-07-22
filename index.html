@@ -14,6 +14,8 @@
       --bg: #0A0A0A;
       --text: #FFFFFF;
       --text-shadow: 0 0 10px rgba(255, 20, 147, 0.7);
+      --nav-link: #4B2E2A; /* Dark Brown */
+      --nav-link-hover: #2E4B4B; /* Dark Blue */
     }
 
     * {
@@ -63,7 +65,7 @@
     }
 
     .nav-links a {
-      color: var(--text);
+      color: var(--nav-link); /* Dark Brown */
       text-decoration: none;
       font-weight: 700;
       font-size: 1.1rem;
@@ -71,7 +73,7 @@
     }
 
     .nav-links a:hover {
-      color: var(--accent);
+      color: var(--nav-link-hover); /* Dark Blue */
       text-shadow: 0 0 10px var(--accent);
     }
 
@@ -103,7 +105,7 @@
     .hero h1 {
       font-family: 'Playfair Display', serif;
       font-size: 5rem;
-      color: var(--text);
+      color: #4B2E2A; /* Dark Brown */
       margin-bottom: 20px;
       text-shadow: var(--text-shadow);
       animation: titleAnimation 2s ease-out;
@@ -122,7 +124,7 @@
 
     .hero p {
       font-size: 1.8rem;
-      color: var(--text);
+      color: #2A4B2E; /* Dark Green */
       margin-bottom: 30px;
       text-shadow: var(--text-shadow);
       animation: subtitleAnimation 2s ease-out 0.5s forwards;
@@ -144,7 +146,7 @@
       display: inline-block;
       padding: 15px 30px;
       background-color: var(--accent);
-      color: var(--bg);
+      color: #2E4B4B; /* Dark Blue */
       text-decoration: none;
       font-weight: 700;
       font-size: 1.2rem;
@@ -295,7 +297,7 @@
       font-size: 3.5rem;
       text-align: center;
       margin-bottom: 50px;
-      text-shadow: var (--text-shadow);
+      text-shadow: var(--text-shadow);
     }
 
     .testimonial-slider {
@@ -394,7 +396,7 @@
         <a href="#portfolio">Portfolio</a>
         <a href="about.html">About</a>
         <a href="#testimonials">Testimonials</a>
-        <a href="#contact">Contact</a>
+        <a href="#connect">Connect</a>
       </div>
     </nav>
   </header>
@@ -408,7 +410,7 @@
       <div class="hero-content">
         <h1>Pauline Laurent</h1>
         <p>Visionary Influencer & PR Strategist</p>
-        <a href="#contact" class="cta-btn">Elevate Your Brand</a>
+        <a href="#connect" class="cta-btn">Elevate Your Brand</a>
       </div>
     </section>
 
@@ -477,12 +479,11 @@
     </section>
   </main>
 
-  <footer id="contact">
+  <footer id="connect">
     <div class="container">
       <div class="social-links">
         <a href="https://instagram.com/paulinelaurent" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href="https://linkedin.com/in/paulinelaurent" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://twitter.com/paulinelaurent" target="_blank" rel="noopener noreferrer">Twitter</a>
       </div>
       <p class="footer-text">&copy; 2023 Pauline Laurent. Elevating Brands, Inspiring Influence.</p>
     </div>
