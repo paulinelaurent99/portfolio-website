@@ -593,18 +593,19 @@
     });
 
     // Typewriter effect for the main heading
-    const headingText = "Let's Create Something Extraordinary";
-    const heading = document.querySelector('.connect-content h2');
-    heading.innerHTML = '';
-    let i = 0;
-    function typeWriter() {
-      if (i < headingText.length) {
-        heading.innerHTML += headingText.charAt(i);
-        i++;
-        setTimeout(typeWriter, 50);
-      }
-    }
-    typeWriter();
+    const headingText = "Feel free to connect with me";
+const heading = document.querySelector('.connect-content h2');
+heading.innerHTML = '';
+let i = 0;
+function typeWriter() {
+  if (i < headingText.length) {
+    heading.innerHTML += headingText.charAt(i);
+    i++;
+    setTimeout(typeWriter, 50);
+  }
+}
+typeWriter();
+
 
     // Add a pulsing effect to the connect buttons
     gsap.to('.connect-btn', {
