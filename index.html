@@ -84,12 +84,14 @@
       overflow: hidden;
     }
 
-    #hero-canvas {
+    .hero video {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
+      object-fit: cover;
+      z-index: 1;
     }
 
     .hero-content {
@@ -389,7 +391,7 @@
       <a href="#" class="logo">PL</a>
       <div class="nav-links">
         <a href="#portfolio">Portfolio</a>
-        <a href="#about">About</a>
+        <a href="about.html">About</a>
         <a href="#testimonials">Testimonials</a>
         <a href="#contact">Contact</a>
       </div>
@@ -398,7 +400,10 @@
 
   <main>
     <section class="hero">
-      <canvas id="hero-canvas"></canvas>
+      <video autoplay muted loop>
+        <source src="4884233-uhd_3840_2160_30fps.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
       <div class="hero-content">
         <h1>Pauline Laurent</h1>
         <p>Visionary Influencer & PR Strategist</p>
@@ -481,108 +486,5 @@
       <p class="footer-text">&copy; 2023 Pauline Laurent. Elevating Brands, Inspiring Influence.</p>
     </div>
   </footer>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script>
-    // 3D Animation for Hero Section
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({
-      canvas: document.getElementById('hero-canvas'),
-      alpha: true
-    });
-    renderer.setSize(window.innerWidth, window.innerHeight);
-
-    const geometry = new THREE.TorusKnotGeometry(10, 3, 100, 16);
-    const material = new THREE.MeshBasicMaterial({
-      color: 0xFF1493,
-      wireframe: true
-    });
-    const torusKnot = new THREE.Mesh(geometry, material);
-    scene.add(torusKnot);
-
-    camera.position.z = 30;
-
-    const animate = () => {
-      requestAnimationFrame(animate);
-      torusKnot.rotation.x += 0.01;
-      torusKnot.rotation.y += 0.01;
-      renderer.render(scene, camera);
-    };
-
-    animate();
-
-    window.addEventListener('resize', () => {
-      const newWidth = window.innerWidth;
-      const newHeight = window.innerHeight;
-      camera.aspect = newWidth / newHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(newWidth, newHeight);
-    });
-
-    // Smooth Scrolling
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-
-    // Header Background Change on Scroll
-    const header = document.querySelector('header');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 100) {
-        header.style.backgroundColor = 'rgba(10, 10, 10, 0.9)';
-      } else {
-        header.style.backgroundColor = 'transparent';
-      }
-    });
-
-    // Portfolio Item Hover Effect
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
-    portfolioItems.forEach(item => {
-      item.addEventListener('mousemove', (e) => {
-        const { left, top, width, height } = item.getBoundingClientRect();
-        const x = (e.clientX - left) / width;
-        const y = (e.clientY - top) / height;
-
-        item.style.transform = `perspective(1000px) rotateX(${(y - 0.5) * 10}deg) rotateY(${(x - 0.5) * 10}deg) scale3d(1.05, 1.05, 1.05)`;
-      });
-
-      item.addEventListener('mouseleave', () => {
-        item.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
-      });
-    });
-
-    // Testimonial Slider
-    const testimonialSlider = document.querySelector('.testimonial-slider');
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-
-    testimonialSlider.addEventListener('mousedown', (e) => {
-      isDown = true;
-      startX = e.pageX - testimonialSlider.offsetLeft;
-      scrollLeft = testimonialSlider.scrollLeft;
-    });
-
-    testimonialSlider.addEventListener('mouseleave', () => {
-      isDown = false;
-    });
-
-    testimonialSlider.addEventListener('mouseup', () => {
-      isDown = false;
-    });
-
-    testimonialSlider.addEventListener('mousemove', (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - testimonialSlider.offsetLeft;
-      const walk = (x - startX) * 2;
-      testimonialSlider.scrollLeft = scrollLeft - walk;
-    });
-  </script>
 </body>
 </html>
