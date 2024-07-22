@@ -1,4 +1,7 @@
-!DOCTYPE html><html><head><base href="https://paulinelaurent.com/#contact">
+<!DOCTYPE html>
+<html>
+<head>
+<base href="https://paulinelaurent.com/#contact">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Connect with Pauline Laurent | Visionary Influencer &amp; PR Strategist</title>
@@ -356,9 +359,9 @@
             </div>
           </div>
           <div>
-</div>
+          </div>
           <div>
-</div>
+          </div>
         </div>
       </div>
     </section>
@@ -594,18 +597,17 @@
 
     // Typewriter effect for the main heading
     const headingText = "Feel free to connect with me";
-const heading = document.querySelector('.connect-content h2');
-heading.innerHTML = '';
-let i = 0;
-function typeWriter() {
-  if (i < headingText.length) {
-    heading.innerHTML += headingText.charAt(i);
-    i++;
-    setTimeout(typeWriter, 50);
-  }
-}
-typeWriter();
-
+    const heading = document.querySelector('.connect-content h2');
+    heading.innerHTML = '';
+    let i = 0;
+    function typeWriter() {
+      if (i < headingText.length) {
+        heading.innerHTML += headingText.charAt(i);
+        i++;
+        setTimeout(typeWriter, 50);
+      }
+    }
+    typeWriter();
 
     // Add a pulsing effect to the connect buttons
     gsap.to('.connect-btn', {
@@ -647,4 +649,6 @@ typeWriter();
     });
   </script>
 
-</body></html>
+</body>
+</html>
+
