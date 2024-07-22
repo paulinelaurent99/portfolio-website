@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pauline Laurent | Visionary Influencer & PR Strategist</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap');
+
+    :root {
+      --primary: #FF1493;
+      --secondary: #00CED1;
+      --accent: #FFD700;
+      --bg: #0A0A0A;
+      --text: #FFFFFF;
+      --text-shadow: 0 0 10px rgba(255, 20, 147, 0.7);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+      transition: background-color 0.3s ease;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: var(--text);
+      text-decoration: none;
+      text-shadow: var(--text-shadow);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+      text-shadow: 0 0 10px var(--accent);
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #hero-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .hero-content {
+      text-align: center;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 5rem;
+      color: var(--text);
+      margin-bottom: 20px;
+      text-shadow: var(--text-shadow);
+      animation: titleAnimation 2s ease-out;
+    }
+
+    @keyframes titleAnimation {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero p {
+      font-size: 1.8rem;
+      color: var(--text);
+      margin-bottom: 30px;
+      text-shadow: var(--text-shadow);
+      animation: subtitleAnimation 2s ease-out 0.5s forwards;
+      opacity: 0;
+    }
+
+    @keyframes subtitleAnimation {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .cta-btn {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: var(--accent);
+      color: var(--bg);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.2rem;
+      border-radius: 50px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: ctaAnimation 2s ease-out 1s forwards;
+      opacity: 0;
+    }
+
+    @keyframes ctaAnimation {
+      0% {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+    }
+
+    .portfolio {
+      padding: 100px 0;
+    }
+
+    .portfolio h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      text-align: center;
+      margin-bottom: 50px;
+      text-shadow: var(--text-shadow);
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 40px;
+    }
+
+    .portfolio-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 15px 40px rgba(255, 20, 147, 0.3);
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .portfolio-item-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 30px;
+      background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+      color: var(--text);
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .portfolio-item:hover .portfolio-item-content {
+      transform: translateY(0);
+    }
+
+    .portfolio-item-content h3 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      text-shadow: var(--text-shadow);
+    }
+
+    .portfolio-item-content p {
+      font-size: 1.1rem;
+      margin-bottom: 0;
+    }
+
+    .about {
+      padding: 150px 0;
+      background: linear-gradient(45deg, var(--primary), var(--secondary));
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-content {
+      display: flex;
+      align-items: center;
+      gap: 80px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .about-image {
+      flex: 1;
+      position: relative;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+
+    .about-text {
+      flex: 1;
+    }
+
+    .about-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      margin-bottom: 30px;
+      text-shadow: var(--text-shadow);
+    }
+
+    .about-text p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .testimonials {
+      padding: 150px 0;
+      background-color: var(--bg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .testimonials h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      text-align: center;
+      margin-bottom: 50px;
+      text-shadow: var(--text-shadow);
+    }
+
+    .testimonial-slider {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .testimonial-slider::-webkit-scrollbar {
+      display: none;
+    }
+
+    .testimonial-item {
+      flex: 0 0 100%;
+      scroll-snap-align: start;
+      padding: 40px;
+      background-color: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      margin-right: 40px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .testimonial-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(255, 20, 147, 0.2);
+    }
+
+    .testimonial-content {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-author {
+      font-weight: 700;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--accent);
+    }
+
+    footer {
+      background-color: var(--bg);
+      color: var(--text);
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .social-links a {
+      color: var(--text);
+      font-size: 2rem;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: var(--accent);
+      transform: translateY(-5px);
+    }
+
+    .footer-text {
+      font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 3.5rem;
+      }
+
+      .hero p {
+        font-size: 1.4rem;
+      }
+
+      .about-content {
+        flex-direction: column;
+      }
+
+      .about-image, .about-text {
+        flex: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a href="#" class="logo">PL</a>
+      <div class="nav-links">
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about">About</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <canvas id="hero-canvas"></canvas>
+      <div class="hero-content">
+        <h1>Pauline Laurent</h1>
+        <p>Visionary Influencer & PR Strategist</p>
+        <a href="#contact" class="cta-btn">Elevate Your Brand</a>
+      </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <h2>Iconic Campaigns</h2>
+        <div class="portfolio-grid">
+          <div class="portfolio-item">
+            <img src="luxury-campaign.jpg" alt="Luxury fashion campaign with models in elegant attire" width="600" height="400">
+            <div class="portfolio-item-content">
+              <h3>Luxe Revolution</h3>
+              <p>Redefining luxury fashion through avant-garde influencer collaborations</p>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <img src="tech-launch.jpg" alt="Futuristic tech product launch event" width="600" height="400">
+            <div class="portfolio-item-content">
+              <h3>TechNova Emergence</h3>
+              <p>Orchestrating a groundbreaking launch for the next unicorn startup</p>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <img src="eco-beauty.jpg" alt="Sustainable beauty products in lush natural setting" width="600" height="400">
+            <div class="portfolio-item-content">
+              <h3>EcoGlow Renaissance</h3>
+              <p>Amplifying the voice of sustainable beauty through authentic storytelling</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-image">
+            <img src="pauline-portrait.jpg" alt="Pauline Laurent in a chic designer outfit, confidently posing in a modern setting" width="600" height="800">
+          </div>
+          <div class="about-text">
+            <h2>The Visionary Behind the Brands</h2>
+            <p>In the ever-evolving landscape of influence and public relations, I stand at the forefront, crafting narratives that resonate across digital and traditional platforms. With an innate understanding of cultural currents and a finger firmly on the pulse of emerging trends, I transform brands into cultural phenomena.</p>
+            <p>My approach is a fusion of data-driven strategy and creative intuition, allowing me to orchestrate campaigns that not only capture attention but ignite conversations and drive tangible results. From luxury fashion houses to disruptive tech startups, I've cultivated a diverse portfolio of success stories, each a testament to the power of strategic storytelling and authentic connections.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+      <div class="container">
+        <h2>Voices of Success</h2>
+        <div class="testimonial-slider">
+          <div class="testimonial-item">
+            <p class="testimonial-content">"Pauline's visionary approach to our influencer campaign was nothing short of revolutionary. She didn't just meet our expectations; she redefined what was possible for our brand in the digital space."</p>
+            <p class="testimonial-author">- Élise Dubois, Creative Director at Maison Lumière</p>
+          </div>
+          <div class="testimonial-item">
+            <p class="testimonial-content">"In the fast-paced world of tech startups, Pauline is our secret weapon. Her ability to craft compelling narratives and secure high-impact media placements was instrumental in our meteoric rise."</p>
+            <p class="testimonial-author">- Raj Patel, CEO of QuantumLeap Technologies</p>
+          </div>
+          <div class="testimonial-item">
+            <p class="testimonial-content">"Pauline's strategic insight and unparalleled network of influencers catapulted our sustainable beauty brand from niche to mainstream. She doesn't just understand the market; she shapes it."</p>
+            <p class="testimonial-author">- Sophia Chen, Founder of GaiaGlow Cosmetics</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="container">
+      <div class="social-links">
+        <a href="https://instagram.com/paulinelaurent" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://linkedin.com/in/paulinelaurent" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://twitter.com/paulinelaurent" target="_blank" rel="noopener noreferrer">Twitter</a>
+      </div>
+      <p class="footer-text">&copy; 2023 Pauline Laurent. Elevating Brands, Inspiring Influence.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script>
+    // 3D Animation for Hero Section
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({
+      canvas: document.getElementById('hero-canvas'),
+      alpha: true
+    });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+
+    const geometry = new THREE.TorusKnotGeometry(10, 3, 100, 16);
+    const material = new THREE.MeshBasicMaterial({
+      color: 0xFF1493,
+      wireframe: true
+    });
+    const torusKnot = new THREE.Mesh(geometry, material);
+    scene.add(torusKnot);
+
+    camera.position.z = 30;
+
+    const animate = () => {
+      requestAnimationFrame(animate);
+      torusKnot.rotation.x += 0.01;
+      torusKnot.rotation.y += 0.01;
+      renderer.render(scene, camera);
+    };
+
+    animate();
+
+    window.addEventListener('resize', () => {
+      const newWidth = window.innerWidth;
+      const newHeight = window.innerHeight;
+      camera.aspect = newWidth / newHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(newWidth, newHeight);
+    });
+
+    // Smooth Scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Header Background Change on Scroll
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        header.style.backgroundColor = 'rgba(10, 10, 10, 0.9)';
+      } else {
+        header.style.backgroundColor = 'transparent';
+      }
+    });
+
+    // Portfolio Item Hover Effect
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    portfolioItems.forEach(item => {
+      item.addEventListener('mousemove', (e) => {
+        const { left, top, width, height } = item.getBoundingClientRect();
+        const x = (e.clientX - left) / width;
+        const y = (e.clientY - top) / height;
+
+        item.style.transform = `perspective(1000px) rotateX(${(y - 0.5) * 10}deg) rotateY(${(x - 0.5) * 10}deg) scale3d(1.05, 1.05, 1.05)`;
+      });
+
+      item.addEventListener('mouseleave', () => {
+        item.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+      });
+    });
+
+    // Testimonial Slider
+    const testimonialSlider = document.querySelector('.testimonial-slider');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    testimonialSlider.addEventListener('mousedown', (e) => {
+      isDown = true;
+      startX = e.pageX - testimonialSlider.offsetLeft;
+      scrollLeft = testimonialSlider.scrollLeft;
+    });
+
+    testimonialSlider.addEventListener('mouseleave', () => {
+      isDown = false;
+    });
+
+    testimonialSlider.addEventListener('mouseup', () => {
+      isDown = false;
+    });
+
+    testimonialSlider.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - testimonialSlider.offsetLeft;
+      const walk = (x - startX) * 2;
+      testimonialSlider.scrollLeft = scrollLeft - walk;
+    });
+  </script>
+</body>
+</html>
