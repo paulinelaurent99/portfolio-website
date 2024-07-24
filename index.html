@@ -1,22 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+  <base href="https://marijnbransen1998.github.io/portfolio-pauline/">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pauline Laurent | Visionary Influencer & PR Strategist</title>
+  <title>Pauline Laurent | Influencer &amp; PR Specialist</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
     :root {
-      --primary: #000000; /* Black */
-      --secondary: #FFFFFF; /* White */
-      --accent: #F5F5DC; /* Beige */
-      --bg: #0A0A0A; /* Dark background */
-      --text: #FFFFFF; /* White text */
-      --text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-      --nav-link: #FFFFFF; /* White for navigation links */
-      --nav-link-hover: #F5F5DC; /* Beige for hover effect */
-      --about-bg: #F5F5DC; /* Background color for about section */
+      --primary: #F5F5DC; /* Changed to beige */
+      --secondary: #D2B48C; /* Darker beige for contrast */
+      --accent: #8B4513; /* Brown for accent */
+      --bg: #0A0A0A;
+      --text: #FFFFFF;
+      --text-shadow: 0 0 10px rgba(245, 245, 220, 0.7); /* Updated shadow color */
     }
 
     * {
@@ -29,6 +27,7 @@
       font-family: 'Bebas Neue', sans-serif;
       background-color: var(--bg);
       color: var(--text);
+      line-height: 1.6;
       overflow-x: hidden;
     }
 
@@ -39,17 +38,17 @@
     }
 
     header {
+      background-color: rgba(10, 10, 10, 0.9);
       position: fixed;
       width: 100%;
       z-index: 1000;
-      transition: background-color 0.3s ease;
+      padding: 20px 0;
     }
 
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 0;
     }
 
     .logo {
@@ -66,7 +65,7 @@
     }
 
     .nav-links a {
-      color: var(--nav-link); /* White */
+      color: var(--text);
       text-decoration: none;
       font-weight: 700;
       font-size: 1.1rem;
@@ -74,7 +73,7 @@
     }
 
     .nav-links a:hover {
-      color: var(--nav-link-hover); /* Beige */
+      color: var(--accent);
       text-shadow: 0 0 10px var(--accent);
     }
 
@@ -83,213 +82,185 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      background: linear-gradient(45deg, var(--primary), var(--secondary));
       position: relative;
       overflow: hidden;
-    }
-
-    .hero video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: 1;
     }
 
     .hero-content {
       text-align: center;
       z-index: 2;
-      position: relative;
     }
 
     .hero h1 {
       font-family: 'Bebas Neue', serif;
-      font-size: 5rem;
-      color: var(--secondary); /* White */
+      font-size: 4rem;
       margin-bottom: 20px;
       text-shadow: var(--text-shadow);
-      animation: titleAnimation 2s ease-out;
-    }
-
-    @keyframes titleAnimation {
-      0% {
-        opacity: 0;
-        transform: translateY(50px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      color: var(--bg); /* Changed to dark color for contrast */
     }
 
     .hero p {
-      font-size: 1.8rem;
-      color: var(--accent); /* Beige */
-      margin-bottom: 30px;
-      text-shadow: var(--text-shadow);
-      animation: subtitleAnimation 2s ease-out 0.5s forwards;
-      opacity: 0;
+      font-size: 1.5rem;
+      max-width: 600px;
+      margin: 0 auto 30px;
+      color: var(--bg); /* Changed to dark color for contrast */
     }
 
-    @keyframes subtitleAnimation {
-      0% {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .cta-btn {
+    .cta-button {
       display: inline-block;
       padding: 15px 30px;
-      background-color: var(--accent); /* Beige */
-      color: var(--primary); /* Black */
+      background-color: var(--accent);
+      color: var(--text);
       text-decoration: none;
       font-weight: 700;
-      font-size: 1.2rem;
-      border-radius: 50px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      animation: ctaAnimation 2s ease-out 1s forwards;
-      opacity: 0;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
-    @keyframes ctaAnimation {
-      0% {
-        opacity: 0;
-        transform: scale(0.9);
-      }
-      100% {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    .cta-btn:hover {
+    .cta-button:hover {
+      background-color: var(--secondary);
       transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(245, 245, 220, 0.3);
     }
 
-    .portfolio {
+    .services {
       padding: 100px 0;
     }
 
-    .portfolio h2 {
+    .services h2 {
       font-family: 'Bebas Neue', serif;
-      font-size: 3.5rem;
+      font-size: 3rem;
       text-align: center;
       margin-bottom: 50px;
-      text-shadow: var(--text-shadow);
+      color: var(--primary);
     }
 
-    .portfolio-grid {
+    .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 40px;
     }
 
-    .portfolio-item {
-      position: relative;
-      overflow: hidden;
+    .service-item {
+      background-color: rgba(245, 245, 220, 0.05);
+      padding: 30px;
       border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .portfolio-item:hover {
-      transform: translateY(-10px) scale(1.02);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    .service-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(245, 245, 220, 0.2);
     }
 
-    .portfolio-item img {
-      width: 100%;
-      height: auto;
-      display: block;
-      transition: transform 0.3s ease;
+    .service-item i {
+      font-size: 3rem;
+      color: var(--accent);
+      margin-bottom: 20px;
     }
 
-    .portfolio-item:hover img {
-      transform: scale(1.1);
-    }
-
-    .portfolio-item-content {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      padding: 30px;
-      background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
-      color: var(--text);
-      transform: translateY(100%);
-      transition: transform 0.3s ease;
-    }
-
-    .portfolio-item:hover .portfolio-item-content {
-      transform: translateY(0);
-    }
-
-    .portfolio-item-content h3 {
-      font-size: 1.8rem;
+    .service-item h3 {
+      font-size: 1.5rem;
       margin-bottom: 15px;
-      text-shadow: var(--text-shadow);
+      color: var(--primary);
     }
 
-    .portfolio-item-content p {
-      font-size: 1.1rem;
-      margin-bottom: 0;
-    }
-
-    .about {
-      padding: 150px 0;
-      background-color: var(--about-bg); /* Beige */
+    /* Enhanced Animated Skills and Languages Sections */
+    .skills, .languages {
+      padding: 100px 0;
+      background-color: rgba(245, 245, 220, 0.05);
       position: relative;
       overflow: hidden;
     }
 
-    .about-content {
-      display: flex;
-      align-items: center;
-      gap: 80px;
-      position: relative;
-      z-index: 2;
+    .skills::before, .languages::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(245, 245, 220, 0.1), rgba(210, 180, 140, 0.1));
+      z-index: 0;
     }
 
-    .about-image {
-      flex: 1;
-      position: relative;
-    }
-
-    .about-image img {
-      width: 100%;
-      height: auto;
-      border-radius: 20px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-    }
-
-    .about-text {
-      flex: 1;
-    }
-
-    .about-text h2 {
+    .skills h2, .languages h2 {
       font-family: 'Bebas Neue', serif;
-      font-size: 3.5rem;
-      margin-bottom: 30px;
-      text-shadow: var(--text-shadow);
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 50px;
+      position: relative;
+      z-index: 1;
+      color: var (--primary);
     }
 
-    .about-text p {
-      font-size: 1.2rem;
-      line-height: 1.8;
-      margin-bottom: 20px;
+    .skill-item, .language-item {
+      margin-bottom: 40px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .skill-name, .language-name {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--primary);
+    }
+
+    .skill-bar, .language-bar {
+      height: 15px;
+      background-color: rgba(245, 245, 220, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .skill-progress, .language-progress {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      width: 0;
+      transition: width 1.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+      position: relative;
+    }
+
+    .skill-progress::after, .language-progress::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(245, 245, 220, 0.1) 0%,
+        rgba(245, 245, 220, 0.2) 50%,
+        rgba(245, 245, 220, 0.1) 100%
+      );
+      animation: shine 2s infinite linear;
+    }
+
+    @keyframes shine {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+
+    .skill-icon, .language-icon {
+      font-size: 1.5rem;
+      margin-right: 10px;
+      color: var(--accent);
     }
 
     footer {
-      background-color: var(--bg);
+      background-color: rgba(10, 10, 10, 0.9);
       color: var(--text);
-      padding: 80px 0;
+      padding: 40px 0;
       text-align: center;
     }
 
@@ -297,12 +268,12 @@
       display: flex;
       justify-content: center;
       gap: 30px;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
 
     .social-links a {
       color: var(--text);
-      font-size: 2rem;
+      font-size: 1.5rem;
       transition: color 0.3s ease, transform 0.3s ease;
     }
 
@@ -312,24 +283,167 @@
     }
 
     .footer-text {
-      font-size: 1rem;
+      font-size: 0.9rem;
+      color: var(--primary);
     }
 
     @media (max-width: 768px) {
       .hero h1 {
-        font-size: 3.5rem;
+        font-size: 3rem;
       }
 
       .hero p {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
       }
 
+      .services h2, .skills h2, .languages h2 {
+        font-size: 2.5rem;
+      }
+    }
+
+    /* 3D Animation */
+    .three-d-element {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      animation: rotate 20s infinite linear;
+    }
+
+    .three-d-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(245, 245, 220, 0.1);
+      border: 2px solid var(--accent);
+      opacity: 0.7;
+    }
+
+    .face1 { transform: translateZ(200px); }
+    .face2 { transform: rotateY(90deg) translateZ(200px); }
+    .face3 { transform: rotateY(180deg) translateZ(200px); }
+    .face4 { transform: rotateY(-90deg) translateZ(200px); }
+    .face5 { transform: rotateX(90deg) translateZ(200px); }
+    .face6 { transform: rotateX(-90deg) translateZ(200px); }
+
+    @keyframes rotate {
+      0% { transform: rotateX(0deg) rotateY(0deg); }
+      100% { transform: rotateX(360deg) rotateY(360deg); }
+    }
+
+    /* New styles for the Skills section */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .skill-card {
+      background-color: rgba(245, 245, 220, 0.05);
+      border-radius: 15px;
+      overflow: hidden;
+      perspective: 1000px;
+      height: 300px;
+    }
+
+    .skill-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+
+    .skill-card:hover .skill-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .skill-card-front, .skill-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .skill-card-front {
+      background-color: rgba(245, 245, 220, 0.1);
+      color: var(--text);
+    }
+
+    .skill-card-back {
+      background-color: var(--accent);
+      color: var(--text);
+      transform: rotateY(180deg);
+    }
+
+    .skill-icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .skill-name {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .skill-level {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .skill-description {
+      font-size: 1rem;
+    }
+
+    /* New styles for the About section */
+    .about {
+      padding: 100px 0;
+      background-color: rgba(245, 245, 220, 0.05);
+    }
+
+    .about-content {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .about-image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .about-image img {
+      max-width: 100%;
+      border-radius: 50%;
+      box-shadow: 0 0 20px rgba(245, 245, 220, 0.3);
+    }
+
+    .about-text {
+      flex: 2;
+    }
+
+    .about h2 {
+      font-family: 'Bebas Neue', serif;
+      font-size: 3rem;
+      margin-bottom: 30px;
+      color: var(--primary);
+    }
+
+    .about p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+
+    @media (max-width: 768px) {
       .about-content {
         flex-direction: column;
-      }
-
-      .about-image, .about-text {
-        flex: auto;
       }
     }
   </style>
@@ -339,79 +453,336 @@
     <nav class="container">
       <a href="https://marijnbransen1998.github.io/portfolio-pauline/" class="logo">PL</a>
       <div class="nav-links">
+        <a href="https://marijnbransen1998.github.io/portfolio-pauline/">Home</a>
         <a href="https://marijnbransen1998.github.io/portfolio-pauline/portfolio.html">Portfolio</a>
         <a href="https://marijnbransen1998.github.io/portfolio-pauline/#about">About</a>
-        <a href="https://marijnbransen1998.github.io/portfolio-pauline/connect.html">Connect</a>
+        <a href="https://marijnbransen1998.github.io/portfolio-pauline/connect.html">Let's Connect</a>
       </div>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <video autoplay muted loop>
-        <source src="2709-161671404_small.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+      <div class="three-d-element">
+        <div class="three-d-face face1"></div>
+        <div class="three-d-face face2"></div>
+        <div class="three-d-face face3"></div>
+        <div class="three-d-face face4"></div>
+        <div class="three-d-face face5"></div>
+        <div class="three-d-face face6"></div>
+      </div>
       <div class="hero-content">
-        <h1>Pauline Laurent</h1>
-        <p>Visionary Influencer & PR Strategist</p>
-        <a href="https://marijnbransen1998.github.io/portfolio-pauline/connect.html" class="cta-btn">Elevate Your Brand</a>
+        <h1 style="color: white;">Pauline Laurent</h1>
+        <p style="color: white;">Elevating brands through strategic influence and innovative PR solutions</p>
+        <a href="https://marijnbransen1998.github.io/portfolio-pauline/connect.html" class="cta-button" style="background-color: black; color: beige; border: 2px solid white; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='beige'; this.style.color='black';" onmouseout="this.style.backgroundColor='black'; this.style.color='beige';">Let's Collaborate</a>
       </div>
     </section>
 
-    <section id="portfolio" class="portfolio">
-      <div class="container">
-        <h2>Iconic Campaigns</h2>
-        <div class="portfolio-grid">
-          <div class="portfolio-item">
-            <img src="luxury-campaign.jpg" alt="Luxury fashion campaign with models in elegant attire" width="600" height="400">
-            <div class="portfolio-item-content">
-              <h3>Luxe Revolution</h3>
-              <p>Redefining luxury fashion through avant-garde influencer collaborations</p>
+    <section class="about container">
+      <div class="about-content">
+        <div class="about-image">
+          <img src="pauline-linkedin.webp" alt="Pauline Laurent" width="400" height="400">
+        </div>
+        <div class="about-text">
+          <h2>About Pauline</h2>
+          <p>Pauline Laurent is a dynamic and innovative PR specialist and influencer marketing expert with over a decade of experience in shaping brand narratives and driving impactful campaigns. Based in Paris but with a global reach, Pauline has worked with some of the world's most recognizable brands across fashion, technology, and lifestyle sectors.</p>
+          <p>Known for her strategic thinking, creative approach, and ability to navigate the ever-changing digital landscape, Pauline has consistently delivered results that exceed client expectations. Her unique blend of traditional PR expertise and cutting-edge influencer marketing strategies has made her a sought-after consultant in the industry.</p>
+          <p>When she's not crafting compelling brand stories or negotiating high-profile partnerships, Pauline enjoys travel photography, practicing yoga, and mentoring aspiring PR professionals. Her passion for communication, coupled with her deep understanding of consumer behavior and digital trends, continues to position her at the forefront of the PR and influencer marketing world.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="services container">
+      <h2>Portfolio</h2>
+      <div class="services-grid">
+        <div class="project-item">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1740&amp;q=80" alt="Luxury brand collaboration project" width="400" height="300">
+          </div>
+          <div class="project-content">
+            <h3>Luxury Brand Collaboration</h3>
+            <p>Orchestrated a game-changing partnership between a high-end fashion house and a sustainable tech startup, resulting in a 200% increase in brand awareness and a 150% boost in sales.</p>
+            <a href="/project/luxury-brand-collab" class="cta-button">View Project</a>
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1551150441-3f3828204ef1?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1740&amp;q=80" alt="Global product launch campaign" width="400" height="300">
+          </div>
+          <div class="project-content">
+            <h3>Global Product Launch</h3>
+            <p>Spearheaded a multi-channel campaign for a revolutionary eco-friendly product, reaching 50 million people across 20 countries and securing coverage in top-tier media outlets.</p>
+            <a href="/project/global-product-launch" class="cta-button">View Project</a>
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1740&amp;q=80" alt="Crisis management for tech giant" width="400" height="300">
+          </div>
+          <div class="project-content">
+            <h3>Tech Giant Crisis Management</h3>
+            <p>Successfully navigated a potential PR disaster for a Fortune 500 tech company, transforming negative sentiment into positive brand reinforcement through strategic communication and media relations.</p>
+            <a href="/project/crisis-management" class="cta-button">View Project</a>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="/all-projects" class="cta-button" style="background-color: #F5F5DC; color: #0A0A0A; border: 2px solid #8B4513; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#D2B48C'; this.style.color='#0A0A0A';" onmouseout="this.style.backgroundColor='#F5F5DC'; this.style.color='#0A0A0A';">View All Projects</a>
+      </div>
+    </section>
+
+    <section class="skills container" style="background-color: black;">
+      <h2>My Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-card-inner">
+            <div class="skill-card-front">
+              <i class="fas fa-bullhorn skill-icon"></i>
+              <h3 class="skill-name">Influencer Marketing</h3>
+            </div>
+            <div class="skill-card-back">
+              <h4 class="skill-level">Expert Level</h4>
+              <p class="skill-description">Orchestrated campaigns reaching over 50M+ audiences, driving 200% increase in engagement for clients.</p>
             </div>
           </div>
-          <div class="portfolio-item">
-            <img src="tech-launch.jpg" alt="Futuristic tech product launch event" width="600" height="400">
-            <div class="portfolio-item-content">
-              <h3>TechNova Emergence</h3>
-              <p>Orchestrating a groundbreaking launch for the next unicorn startup</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-inner">
+            <div class="skill-card-front">
+              <i class="fas fa-chart-line skill-icon"></i>
+              <h3 class="skill-name">Brand Strategy</h3>
+            </div>
+            <div class="skill-card-back">
+              <h4 class="skill-level">Advanced</h4>
+              <p class="skill-description">Developed comprehensive brand strategies resulting in 150% increase in brand value for multiple Fortune 500 companies.</p>
             </div>
           </div>
-          <div class="portfolio-item">
-            <img src="eco-beauty.jpg" alt="Sustainable beauty products in lush natural setting" width="600" height="400">
-            <div class="portfolio-item-content">
-              <h3>EcoGlow Renaissance</h3>
-              <p>Amplifying the voice of sustainable beauty through authentic storytelling</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-inner">
+            <div class="skill-card-front">
+              <i class="fas fa-newspaper skill-icon"></i>
+              <h3 class="skill-name">Media Relations</h3>
+            </div>
+            <div class="skill-card-back">
+              <h4 class="skill-level">Expert Level</h4>
+              <p class="skill-description">Secured coverage in top-tier publications like Forbes, WSJ, and TechCrunch, amplifying client visibility by 300%.</p>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-inner">
+            <div class="skill-card-front">
+              <i class="fas fa-comments skill-icon"></i>
+              <h3 class="skill-name">Crisis Management</h3>
+            </div>
+            <div class="skill-card-back">
+              <h4 class="skill-level">Advanced</h4>
+              <p class="skill-description">Successfully mitigated high-stakes crises for multinational corporations, preserving brand integrity and stakeholder trust.</p>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-inner">
+            <div class="skill-card-front">
+              <i class="fas fa-calendar-alt skill-icon"></i>
+              <h3 class="skill-name">Event Planning</h3>
+            </div>
+            <div class="skill-card-back">
+              <h4 class="skill-level">Expert Level</h4>
+              <p class="skill-description">Organized high-profile events attended by industry leaders and celebrities, generating significant media buzz and ROI.</p>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-inner">
+            <div class="skill-card-front">
+              <i class="fas fa-hashtag skill-icon"></i>
+              <h3 class="skill-name">Social Media Strategy</h3>
+            </div>
+            <div class="skill-card-back">
+              <h4 class="skill-level">Advanced</h4>
+              <p class="skill-description">Crafted viral social media campaigns, increasing follower engagement by 250% and driving substantial conversion rates.</p>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-inner">
+            <div class="skill-card-front">
+              <i class="fas fa-handshake skill-icon"></i>
+              <h3 class="skill-name">Networking</h3>
+            </div>
+            <div class="skill-card-back">
+              <h4 class="skill-level">Expert Level</h4>
+              <p class="skill-description">Built and maintained a vast network of industry contacts, facilitating strategic partnerships and collaborations.</p>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-inner">
+            <div class="skill-card-front">
+              <i class="fas fa-pencil-alt skill-icon"></i>
+              <h3 class="skill-name">Content Creation</h3>
+            </div>
+            <div class="skill-card-back">
+              <h4 class="skill-level">Advanced</h4>
+              <p class="skill-description">Produced compelling content across various platforms, increasing audience engagement and brand loyalty.</p>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-inner">
+            <div class="skill-card-front">
+              <i class="fas fa-chart-pie skill-icon"></i>
+              <h3 class="skill-name">Data Analysis</h3>
+            </div>
+            <div class="skill-card-back">
+              <h4 class="skill-level">Intermediate</h4>
+              <p class="skill-description">Utilized data-driven insights to optimize PR strategies and measure campaign effectiveness.</p>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-inner">
+            <div class="skill-card-front">
+              <i class="fas fa-globe skill-icon"></i>
+              <h3 class="skill-name">Global Communications</h3>
+            </div>
+            <div class="skill-card-back">
+              <h4 class="skill-level">Advanced</h4>
+              <p class="skill-description">Managed international PR campaigns, adapting strategies to diverse cultural contexts and markets.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="about" class="about">
-      <div class="container">
-        <div class="about-content">
-          <div class="about-image">
-            <img src="pauline-linkedin.webp" alt="Pauline Laurent in a chic designer outfit, confidently posing in a modern setting" width="600" height="800">
-          </div>
-          <div class="about-text">
-            <h2>The Visionary Behind the Brands</h2>
-            <p>In the ever-evolving landscape of influence and public relations, I stand at the forefront, crafting narratives that resonate across digital and traditional platforms. With an innate understanding of cultural currents and a finger firmly on the pulse of emerging trends, I transform brands into cultural phenomena.</p>
-            <p>My approach is a fusion of data-driven strategy and creative intuition, allowing me to orchestrate campaigns that not only capture attention but ignite conversations and drive tangible results. From luxury fashion houses to disruptive tech startups, I've cultivated a diverse portfolio of success stories, each a testament to the power of strategic storytelling and authentic connections.</p>
-          </div>
+    <section class="languages container" style="background-color: #000000;">
+      <h2>Languages</h2>
+      <div class="language-item">
+        <div class="language-name">
+          <span><i class="fas fa-flag language-icon"></i>French (Native)</span>
+        </div>
+        <div class="language-bar">
+          <div class="language-progress" data-progress="100"></div>
+        </div>
+      </div>
+      <div class="language-item">
+        <div class="language-name">
+          <span><i class="fas fa-flag language-icon"></i>English</span>
+        </div>
+        <div class="language-bar">
+          <div class="language-progress" data-progress="95"></div>
+        </div>
+      </div>
+      <div class="language-item">
+        <div class="language-name">
+          <span><i class="fas fa-flag language-icon"></i>Spanish</span>
+        </div>
+        <div class="language-bar">
+          <div class="language-progress" data-progress="80"></div>
+        </div>
+      </div>
+      <div class="language-item">
+        <div class="language-name">
+          <span><i class="fas fa-flag language-icon"></i>Dutch</span>
+        </div>
+        <div class="language-bar">
+          <div class="language-progress" data-progress="30"></div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer id="connect">
+  <footer>
     <div class="container">
       <div class="social-links">
-        <a href="https://www.instagram.com/paaulinelaurent/?igsh=MXRjMzVyanp3b21wcw%3D%3D" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="https://www.linkedin.com/in/paulinelaurentdigital/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.instagram.com/paaulinelaurent/?igsh=MXRjMzVyanp3b21wcw%3D%3D" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/paulinelaurentdigital/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
       </div>
-      <p class="footer-text">&copy; 2023 Pauline Laurent. Elevating Brands, Inspiring Influence.</p>
+      <p class="footer-text">© 2023 Pauline Laurent. Elevating Brands, Inspiring Influence.</p>
     </div>
   </footer>
+
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+  <script>
+    // Smooth Scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Parallax Effect for Hero Section
+    window.addEventListener('scroll', () => {
+      const scrollPosition = window.pageYOffset;
+      document.querySelector('.hero').style.backgroundPositionY = scrollPosition * 0.7 + 'px';
+    });
+
+    // Service Item Hover Effect
+    const serviceItems = document.querySelectorAll('.service-item');
+    serviceItems.forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        item.style.transform = 'translateY(-10px)';
+      });
+
+      item.addEventListener('mouseleave', () => {
+        item.style.transform = 'translateY(0)';
+      });
+    });
+
+    // Enhanced Animated Skills and Languages Sections
+    function animateProgress(selector) {
+      const bars = document.querySelectorAll(selector);
+      bars.forEach(bar => {
+        const progress = bar.getAttribute('data-progress');
+        bar.style.width = `${progress}%`;
+      });
+    }
+
+    // Intersection Observer for Skills and Languages Animation
+    const observerOptions = { 
+      threshold: 0.1,
+      rootMargin: "0px 0px -100px 0px"
+    };
+
+    const animateSections = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (entry.target.classList.contains('skills')) {
+            animateProgress('.skill-progress');
+          } else if (entry.target.classList.contains('languages')) {
+            animateProgress('.language-progress');
+          }
+          observer.unobserve(entry.target);
+        }
+      });
+    };
+
+    const sectionObserver = new IntersectionObserver(animateSections, observerOptions);
+
+    const skillsSection = document.querySelector('.skills');
+    const languagesSection = document.querySelector('.languages');
+
+    sectionObserver.observe(skillsSection);
+    sectionObserver.observe(languagesSection);
+
+    // Add hover effect to skill and language bars
+    const allBars = document.querySelectorAll('.skill-bar, .language-bar');
+    allBars.forEach(bar => {
+      bar.addEventListener('mouseenter', () => {
+        bar.style.transform = 'scale(1.05)';
+        bar.style.boxShadow = '0 0 15px rgba(245, 245, 220, 0.5)';
+      });
+
+      bar.addEventListener('mouseleave', () => {
+        bar.style.transform = 'scale(1)';
+        bar.style.boxShadow = 'none';
+      });
+    });
+  </script>
 </body>
 </html>
