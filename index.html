@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pauline Laurent | Visionary Influencer & PR Strategist</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
     :root {
-      --primary: #FF1493;
-      --secondary: #00CED1;
-      --accent: #FFD700;
-      --bg: #0A0A0A;
-      --text: #FFFFFF;
-      --text-shadow: 0 0 10px rgba(255, 20, 147, 0.7);
-      --nav-link: #4B2E2A; /* Dark Brown */
-      --nav-link-hover: #2E4B4B; /* Dark Blue */
-      --about-bg: #9c8d7f; /* Background color for about section */
+      --primary: #000000; /* Black */
+      --secondary: #FFFFFF; /* White */
+      --accent: #F5F5DC; /* Beige */
+      --bg: #0A0A0A; /* Dark background */
+      --text: #FFFFFF; /* White text */
+      --text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+      --nav-link: #FFFFFF; /* White for navigation links */
+      --nav-link-hover: #F5F5DC; /* Beige for hover effect */
+      --about-bg: #F5F5DC; /* Background color for about section */
     }
 
     * {
@@ -26,7 +26,7 @@
     }
 
     body {
-      font-family: 'Cinzel', sans-serif;
+      font-family: 'Bebas Neue', sans-serif;
       background-color: var(--bg);
       color: var(--text);
       overflow-x: hidden;
@@ -53,7 +53,7 @@
     }
 
     .logo {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Bebas Neue', serif;
       font-size: 2.5rem;
       color: var(--text);
       text-decoration: none;
@@ -66,7 +66,7 @@
     }
 
     .nav-links a {
-      color: var(--nav-link); /* Dark Brown */
+      color: var(--nav-link); /* White */
       text-decoration: none;
       font-weight: 700;
       font-size: 1.1rem;
@@ -74,7 +74,7 @@
     }
 
     .nav-links a:hover {
-      color: var(--nav-link-hover); /* Dark Blue */
+      color: var(--nav-link-hover); /* Beige */
       text-shadow: 0 0 10px var(--accent);
     }
 
@@ -104,9 +104,9 @@
     }
 
     .hero h1 {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Bebas Neue', serif;
       font-size: 5rem;
-      color: #4B2E2A; /* Dark Brown */
+      color: var(--secondary); /* White */
       margin-bottom: 20px;
       text-shadow: var(--text-shadow);
       animation: titleAnimation 2s ease-out;
@@ -125,7 +125,7 @@
 
     .hero p {
       font-size: 1.8rem;
-      color: #2A4B2E; /* Dark Green */
+      color: var(--accent); /* Beige */
       margin-bottom: 30px;
       text-shadow: var(--text-shadow);
       animation: subtitleAnimation 2s ease-out 0.5s forwards;
@@ -146,8 +146,8 @@
     .cta-btn {
       display: inline-block;
       padding: 15px 30px;
-      background-color: var(--accent);
-      color: #2E4B4B; /* Dark Blue */
+      background-color: var(--accent); /* Beige */
+      color: var(--primary); /* Black */
       text-decoration: none;
       font-weight: 700;
       font-size: 1.2rem;
@@ -170,7 +170,7 @@
 
     .cta-btn:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+      box-shadow: 0 10px 20px rgba(245, 245, 220, 0.3);
     }
 
     .portfolio {
@@ -178,7 +178,7 @@
     }
 
     .portfolio h2 {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Bebas Neue', serif;
       font-size: 3.5rem;
       text-align: center;
       margin-bottom: 50px;
@@ -201,7 +201,7 @@
 
     .portfolio-item:hover {
       transform: translateY(-10px) scale(1.02);
-      box-shadow: 0 15px 40px rgba(255, 20, 147, 0.3);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
     }
 
     .portfolio-item img {
@@ -244,7 +244,7 @@
 
     .about {
       padding: 150px 0;
-      background-color: var(--about-bg); /* Updated background color */
+      background-color: var(--about-bg); /* Beige */
       position: relative;
       overflow: hidden;
     }
@@ -274,7 +274,7 @@
     }
 
     .about-text h2 {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Bebas Neue', serif;
       font-size: 3.5rem;
       margin-bottom: 30px;
       text-shadow: var(--text-shadow);
@@ -284,61 +284,6 @@
       font-size: 1.2rem;
       line-height: 1.8;
       margin-bottom: 20px;
-    }
-
-    .testimonials {
-      padding: 150px 0;
-      background-color: var(--bg);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .testimonials h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3.5rem;
-      text-align: center;
-      margin-bottom: 50px;
-      text-shadow: var(--text-shadow);
-    }
-
-    .testimonial-slider {
-      display: flex;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-    }
-
-    .testimonial-slider::-webkit-scrollbar {
-      display: none;
-    }
-
-    .testimonial-item {
-      flex: 0 0 100%;
-      scroll-snap-align: start;
-      padding: 40px;
-      background-color: rgba(255,255,255,0.05);
-      border-radius: 20px;
-      margin-right: 40px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .testimonial-item:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(255, 20, 147, 0.2);
-    }
-
-    .testimonial-content {
-      font-size: 1.2rem;
-      line-height: 1.8;
-      margin-bottom: 20px;
-    }
-
-    .testimonial-author {
-      font-weight: 700;
-      font-style: italic;
-      font-size: 1.1rem;
-      color: var(--accent);
     }
 
     footer {
@@ -396,7 +341,6 @@
       <div class="nav-links">
         <a href="https://marijnbransen1998.github.io/portfolio-pauline/portfolio.html">Portfolio</a>
         <a href="https://marijnbransen1998.github.io/portfolio-pauline/#about">About</a>
-        <a href="https://marijnbransen1998.github.io/portfolio-pauline/#testimonials">Testimonials</a>
         <a href="https://marijnbransen1998.github.io/portfolio-pauline/connect.html">Connect</a>
       </div>
     </nav>
@@ -458,26 +402,6 @@
         </div>
       </div>
     </section>
-
-    <section id="testimonials" class="testimonials">
-      <div class="container">
-        <h2>Voices of Success</h2>
-        <div class="testimonial-slider">
-          <div class="testimonial-item">
-            <p class="testimonial-content">"Pauline's visionary approach to our influencer campaign was nothing short of revolutionary. She didn't just meet our expectations; she redefined what was possible for our brand in the digital space."</p>
-            <p class="testimonial-author">- Élise Dubois, Creative Director at Maison Lumière</p>
-          </div>
-          <div class="testimonial-item">
-            <p class="testimonial-content">"In the fast-paced world of tech startups, Pauline is our secret weapon. Her ability to craft compelling narratives and secure high-impact media placements was instrumental in our meteoric rise."</p>
-            <p class="testimonial-author">- Raj Patel, CEO of QuantumLeap Technologies</p>
-          </div>
-          <div class="testimonial-item">
-            <p class="testimonial-content">"Pauline's strategic insight and unparalleled network of influencers catapulted our sustainable beauty brand from niche to mainstream. She doesn't just understand the market; she shapes it."</p>
-            <p class="testimonial-author">- Sophia Chen, Founder of GaiaGlow Cosmetics</p>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer id="connect">
@@ -491,4 +415,3 @@
   </footer>
 </body>
 </html>
-
