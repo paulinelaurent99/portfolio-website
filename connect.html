@@ -4,19 +4,17 @@
   <base href="https://marijnbransen1998.github.io/portfolio-pauline/">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Connect with Pauline Laurent | Visionary Influencer &amp; PR Strategist</title>
+  <title>Connect with Pauline Laurent | Visionary Influencer & PR Strategist</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
     :root {
-      --primary: #2C2C2C;
-      --secondary: #F5F5DC;
-      --accent: #8B7D6B;
-      --bg: #FFFFFF;
-      --text: #2C2C2C;
-      --text-shadow: 0 0 10px rgba(139, 125, 107, 0.7);
-      --button-bg: #E6DED1;
-      --button-text: #4A4A4A;
+      --primary: #F5F5DC; /* Beige */
+      --secondary: #D2B48C; /* Darker beige for contrast */
+      --accent: #8B4513; /* Brown for accent */
+      --bg: #0A0A0A;
+      --text: #FFFFFF;
+      --text-shadow: 0 0 10px rgba(245, 245, 220, 0.7); /* Updated shadow color */
     }
 
     * {
@@ -26,39 +24,37 @@
     }
 
     body {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Bebas Neue', sans-serif;
       background-color: var(--bg);
       color: var(--text);
+      line-height: 1.6;
       overflow-x: hidden;
     }
 
     .container {
-      max-width: 1200px;
+      max-width: 1400px;
       margin: 0 auto;
       padding: 0 20px;
-      position: relative;
-      z-index: 1;
     }
 
     header {
-      background-color: rgba(255, 255, 255, 0.9);
+      background-color: rgba(10, 10, 10, 0.9);
       position: fixed;
       width: 100%;
       z-index: 1000;
-      transition: background-color 0.3s ease;
+      padding: 20px 0;
     }
 
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 0;
     }
 
     .logo {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Bebas Neue', serif;
       font-size: 2.5rem;
-      color: var(--primary);
+      color: var(--text);
       text-decoration: none;
       text-shadow: var(--text-shadow);
     }
@@ -69,7 +65,7 @@
     }
 
     .nav-links a {
-      color: var(--primary);
+      color: var(--text);
       text-decoration: none;
       font-weight: 700;
       font-size: 1.1rem;
@@ -96,7 +92,7 @@
       max-width: 800px;
       position: relative;
       z-index: 2;
-      background-color: rgba(255, 255, 255, 0.8);
+      background-color: rgba(10, 10, 10, 0.8);
       padding: 40px;
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -110,7 +106,7 @@
     }
 
     .connect-content h2 {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Bebas Neue', serif;
       font-size: 3.5rem;
       margin-bottom: 30px;
       text-shadow: var(--text-shadow);
@@ -175,7 +171,7 @@
 
     .connect-btn {
       padding: 15px 30px;
-      background-color: var (--button-bg);
+      background-color: var(--button-bg);
       color: var(--button-text);
       border: none;
       border-radius: 30px;
@@ -306,10 +302,6 @@
               <button class="connect-btn">Connect on LinkedIn</button>
             </div>
           </div>
-          <div>
-          </div>
-          <div>
-          </div>
         </div>
       </div>
     </section>
@@ -332,7 +324,7 @@
     const header = document.querySelector('header');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 100) {
-        header.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
+        header.style.backgroundColor = 'rgba(10, 10, 10, 0.9)';
       } else {
         header.style.backgroundColor = 'transparent';
       }
