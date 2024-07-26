@@ -136,7 +136,7 @@
     }
 
     .social-links a {
-      color: var(--text);
+      color: var (--text);
       font-size: 1.5rem;
       transition: color 0.3s ease, transform 0.3s ease;
     }
@@ -210,7 +210,8 @@
 
     .timeline-item-content {
       padding: 20px 30px;
-      background-color: white;
+      background-color: var(--bg);
+      color: var(--text);
       position: relative;
       border-radius: 10px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -218,19 +219,51 @@
 
     .timeline-item-content h3 {
       font-size: 1.8rem;
-      color: var(--bg);
+      color: var(--primary);
       margin-bottom: 10px;
+    }
+
+    .timeline-item-content h4 {
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 15px;
+      font-style: italic;
     }
 
     .timeline-item-content p {
       font-size: 1.2rem;
-      color: var(--bg);
+      color: var(--text);
     }
 
     .timeline-item-content time {
       display: block;
       font-size: 1.2rem;
       margin-bottom: 15px;
+      color: var (--secondary);
+    }
+
+    .task-card {
+      display: flex;
+      align-items: center;
+      background-color: rgba(245, 245, 220, 0.1);
+      color: var (--text);
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .task-card i {
+      margin-right: 10px;
+      font-size: 1.5rem;
+    }
+
+    .task-card p {
+      margin: 0;
+    }
+
+    .task-card p strong {
+      font-weight: bold;
       color: var(--secondary);
     }
 
@@ -322,12 +355,23 @@
               <div class="timeline-item-content">
                   <time>Oct. 2023 - Present</time>
                   <h3>Pascale Venot Bureau de Presse</h3>
-                  <p>Influence Project Manager<br>
-                  - Development and execution of influence strategies, including profile identification and campaign management.<br>
-                  - Organization of influencer events, negotiation of influencer contracts, and creation of detailed post-campaign reports.<br>
-                  - Talent Management: Implemented social media strategy and managed brand collaborations for a famous AI influencer.<br>
-                  - Marketing: Developed and implemented Deliveroo France marketing strategy, organized shootings, co-created products, and managed retro planning and budget.
-                  </p>
+                  <h4><i>Influence Project Manager</i></h4>
+                  <div class="task-card">
+                    <i class="fas fa-tasks"></i>
+                    <p><strong>Influence Project Manager</strong>: Development and execution of influence strategies, including profile identification and campaign management.</p>
+                  </div>
+                  <div class="task-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <p><strong>Event Organization</strong>: Organization of influencer events, negotiation of influencer contracts, and creation of detailed post-campaign reports.</p>
+                  </div>
+                  <div class="task-card">
+                    <i class="fas fa-user-cog"></i>
+                    <p><strong>Talent Management</strong>: Implemented social media strategy and managed brand collaborations for a famous AI influencer.</p>
+                  </div>
+                  <div class="task-card">
+                    <i class="fas fa-bullhorn"></i>
+                    <p><strong>Marketing</strong>: Developed and implemented Deliveroo France marketing strategy, organized shootings, co-created products, and managed retro planning and budget.</p>
+                  </div>
                   <p><strong>Clients:</strong> Yannick Alléno***, Michel Kayser**, Coca Cola, Accor Group (TOO Hôtel, Pullman Tour Eiffel), Highstay Paris, Wonderbox, Arcadys Group (Artisan de la Truffe, Astara), Gamm Vert, Noti Club, La Bohème Montmartre.</p>
               </div>
           </div>
@@ -335,12 +379,24 @@
           <div class="timeline-item right">
               <div class="timeline-item-content">
                   <time>Aug. 2022 - Oct. 2023</time>
-                  <h3>Press and Influence Officer</h3>
-                  <p>- Creation of strategic recommendations.<br>
-                  - Setting up partnerships and co-brandings.<br>
-                  - Organization of influence events.<br>
-                  - Post-campaign qualitative and quantitative reporting.
-                  </p>
+                  <h3>Pascale Venot Bureau de Presse</h3>
+                  <h4><i>Press and Influence Officer</i></h4>
+                  <div class="task-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <p><strong>Strategic Recommendations</strong>: Creation of strategic recommendations.</p>
+                  </div>
+                  <div class="task-card">
+                    <i class="fas fa-handshake"></i>
+                    <p><strong>Partnerships and Co-brandings</strong>: Setting up partnerships and co-brandings.</p>
+                  </div>
+                  <div class="task-card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <p><strong>Event Organization</strong>: Organization of influence events.</p>
+                  </div>
+                  <div class="task-card">
+                    <i class="fas fa-chart-line"></i>
+                    <p><strong>Post-campaign Reporting</strong>: Post-campaign qualitative and quantitative reporting.</p>
+                  </div>
                   <p><strong>Clients:</strong> Giuseppe Cutraro, Chef Akrame, Bo Concept, Bivouak Beach Club, Restaurant Salvaje Paris, Pokawa.</p>
               </div>
           </div>
@@ -349,17 +405,27 @@
               <div class="timeline-item-content">
                   <time>Sep. 2020 - Jan. 2021</time>
                   <h3>Blush Concept Store (Internship)</h3>
-                  <p>- Participation in the development of the e-commerce site.<br>
-                  - Revamping the blog and writing articles.<br>
-                  - Writing and layout of newsletters.<br>
-                  - Daily use of Photoshop and Indesign.<br>
-                  - Shooting products in a photo booth.<br>
-                  - Creation of a Pinterest account.<br>
-                  - Community management for Instagram and Facebook.<br>
-                  - SEO/SEA referencing.<br>
-                  - Internet order management and customer relations.<br>
-                  - Press review.
-                  </p>
+                  <div class="task-card">
+                    <i class="fas fa-globe"></i>
+                    <p><strong>E-commerce Development</strong>: Participation in the development of the e-commerce site.</p>
+                  </div>
+                  <div class="task-card">
+                    <i class="fas fa-blog"></i>
+                    <p><strong>Blog Revamp</strong>: Revamping the blog and writing articles.</p>
+                  </div>
+                  <div class="task-card">
+                    <i class="fas fa-envelope"></i>
+                    <p><strong>Newsletter Management</strong>: Writing and layout of newsletters.</p>
+                  </div>
+                  <div class="task-card">
+                    <i class="fas fa-camera"></i>
+                    <p><strong>Product Photography</strong>: Shooting products in a photo booth.</p>
+                  </div>
+                  <div class="task-card">
+                    <i class="fas fa-chart-bar"></i>
+                    <p><strong>SEO/SEA</strong>: SEO/SEA referencing.</p>
+                  </div>
+                  <p><strong>Other tasks:</strong> Creation of a Pinterest account, community management for Instagram and Facebook, internet order management and customer relations, press review.</p>
               </div>
           </div>
 
@@ -367,12 +433,22 @@
               <div class="timeline-item-content">
                   <time>Jan. 2020 - Apr. 2020</time>
                   <h3>AXA (Internship)</h3>
-                  <p>Internal Communications and Events Officer<br>
-                  - Participation in the Energy Tour and other events.<br>
-                  - Production of short films and interviews with directors.<br>
-                  - Writing articles for the AXA France website.<br>
-                  - Organization of events for the AXA Atout Coeur association.
-                  </p>
+                  <div class="task-card">
+                    <i class="fas fa-bolt"></i>
+                    <p><strong>Energy Tour Participation</strong>: Participation in the Energy Tour and other events.</p>
+                  </div>
+                  <div class="task-card">
+                    <i class="fas fa-video"></i>
+                    <p><strong>Film Production</strong>: Production of short films and interviews with directors.</p>
+                  </div>
+                  <div class="task-card">
+                    <i class="fas fa-pen"></i>
+                    <p><strong>Content Writing</strong>: Writing articles for the AXA France website.</p>
+                  </div>
+                  <div class="task-card">
+                    <i class="fas fa-heart"></i>
+                    <p><strong>Event Organization</strong>: Organization of events for the AXA Atout Coeur association.</p>
+                  </div>
               </div>
           </div>
 
@@ -380,11 +456,18 @@
               <div class="timeline-item-content">
                   <time>Apr. 2019 - Jun. 2019</time>
                   <h3>Office National des Forêts (Internship)</h3>
-                  <p>Corporate Communications Assistant<br>
-                  - Attendance and organization of activities at the Biodiversity Days.<br>
-                  - Contact with regional journalists for article writing.<br>
-                  - Regular press reviews.
-                  </p>
+                  <div class="task-card">
+                    <i class="fas fa-seedling"></i>
+                    <p><strong>Biodiversity Days</strong>: Attendance and organization of activities at the Biodiversity Days.</p>
+                  </div>
+                  <div class="task-card">
+                    <i class="fas fa-newspaper"></i>
+                    <p><strong>Journalist Contact</strong>: Contact with regional journalists for article writing.</p>
+                  </div>
+                  <div class="task-card">
+                    <i class="fas fa-file-alt"></i>
+                    <p><strong>Press Reviews</strong>: Regular press reviews.</p>
+                  </div>
               </div>
           </div>
       </div>
