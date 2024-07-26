@@ -86,10 +86,11 @@
       display: flex;
       align-items: center;
       gap: 50px;
+      flex-wrap: wrap;
     }
 
     .about-image {
-      flex: 1;
+      flex: 1 1 300px;
       text-align: center;
     }
 
@@ -99,7 +100,7 @@
     }
 
     .about-text {
-      flex: 2;
+      flex: 2 1 600px;
     }
 
     .about h2 {
@@ -136,7 +137,7 @@
     }
 
     .social-links a {
-      color: var (--text);
+      color: var(--text);
       font-size: 1.5rem;
       transition: color 0.3s ease, transform 0.3s ease;
     }
@@ -152,8 +153,6 @@
     }
 
     .timeline-container {
-      display: flex;
-      flex-direction: column;
       position: relative;
       max-width: 1200px;
       margin: 0 auto;
@@ -239,14 +238,14 @@
       display: block;
       font-size: 1.2rem;
       margin-bottom: 15px;
-      color: var (--secondary);
+      color: var(--secondary);
     }
 
     .task-card {
       display: flex;
       align-items: center;
       background-color: rgba(245, 245, 220, 0.1);
-      color: var (--text);
+      color: var(--text);
       padding: 10px;
       border-radius: 5px;
       margin-bottom: 10px;
@@ -293,12 +292,45 @@
     }
 
     @media (max-width: 768px) {
+      .timeline::after {
+        left: 20px;
+      }
+
+      .timeline-item {
+        width: 100%;
+        padding-left: 60px;
+        padding-right: 25px;
+      }
+
       .timeline-item.right {
         left: 0;
       }
 
       .timeline-item::after {
-        left: -12.5px;
+        left: 18px;
+      }
+
+      .timeline-item-content::after {
+        left: 13px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .timeline-item {
+        padding-left: 45px;
+        padding-right: 15px;
+      }
+
+      .timeline-item::after {
+        left: 12px;
+      }
+
+      .timeline-item-content::after {
+        left: 7px;
+      }
+
+      .task-card p {
+        font-size: 0.9rem;
       }
     }
 
