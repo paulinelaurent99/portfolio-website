@@ -97,14 +97,14 @@
       font-size: 4rem;
       margin-bottom: 20px;
       text-shadow: var(--text-shadow);
-      color: var(--bg); /* Changed to dark color for contrast */
+      color: var (--bg); /* Changed to dark color for contrast */
     }
 
     .hero p {
       font-size: 1.5rem;
       max-width: 600px;
       margin: 0 auto 30px;
-      color: var(--bg); /* Changed to dark color for contrast */
+      color: var (--bg); /* Changed to dark color for contrast */
     }
 
     .cta-button {
@@ -427,7 +427,6 @@
 
     .about-image img {
       max-width: 100%;
-      border-radius: 50%;
       box-shadow: 0 0 20px rgba(245, 245, 220, 0.3);
     }
 
@@ -746,7 +745,7 @@
       const bars = document.querySelectorAll(selector);
       bars.forEach(bar => {
         const progress = bar.getAttribute('data-progress');
-        bar.style.width = `${progress}%`;
+        bar.style.width = ${progress}%;
       });
     }
 
