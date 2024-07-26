@@ -4,7 +4,7 @@
   <base href="https://marijnbransen1998.github.io/portfolio-pauline/">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pauline Laurent | Influencer &amp; PR Specialist</title>
+  <title>Pauline Laurent | Influencer & PR Specialist</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
@@ -73,8 +73,8 @@
     }
 
     .nav-links a:hover {
-      color: var(--accent);
-      text-shadow: 0 0 10px var(--accent);
+      color: var(--primary); /* Changed to beige */
+      text-shadow: 0 0 10px var(--primary); /* Changed to beige */
     }
 
     .hero {
@@ -97,29 +97,32 @@
       font-size: 4rem;
       margin-bottom: 20px;
       text-shadow: var(--text-shadow);
-      color: var (--bg); /* Changed to dark color for contrast */
+      color: var(--bg); /* Changed to dark color for contrast */
     }
 
     .hero p {
       font-size: 1.5rem;
       max-width: 600px;
       margin: 0 auto 30px;
-      color: var (--bg); /* Changed to dark color for contrast */
+      color: var(--bg); /* Changed to dark color for contrast */
     }
 
     .cta-button {
       display: inline-block;
       padding: 15px 30px;
-      background-color: var(--accent);
-      color: var(--text);
+      background-color: var(--bg);
+      color: var(--primary);
       text-decoration: none;
       font-weight: 700;
       border-radius: 5px;
-      transition: background-color 0.3s ease, transform 0.3s ease;
+      border: 2px solid white;
+      transition: all 0.3s ease;
     }
 
     .cta-button:hover {
-      background-color: var(--secondary);
+      background-color: var(--primary);
+      color: var(--bg);
+      border-color: var(--bg);
       transform: translateY(-5px);
     }
 
@@ -192,7 +195,7 @@
       margin-bottom: 50px;
       position: relative;
       z-index: 1;
-      color: var (--primary);
+      color: var(--primary);
     }
 
     .skill-item, .language-item {
@@ -418,7 +421,6 @@
       display: flex;
       align-items: center;
       gap: 50px;
-      position: relative;
     }
 
     .about-image {
@@ -448,38 +450,30 @@
       color: var(--text);
     }
 
-    .read-more-button {
+    .about .cta-button {
+      margin-top: 30px;
       display: inline-block;
+      text-align: center;
       padding: 15px 30px;
-      background-color: black;
-      color: beige;
+      background-color: var(--bg);
+      color: var(--primary);
       text-decoration: none;
       font-weight: 700;
       border-radius: 5px;
-      transition: all 0.3s ease;
       border: 2px solid white;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: -50px;
+      transition: all 0.3s ease;
     }
 
-    .read-more-button:hover {
-      background-color: beige;
-      color: black;
+    .about .cta-button:hover {
+      background-color: var(--primary);
+      color: var(--bg);
+      border-color: var(--bg);
+      transform: translateY(-5px);
     }
 
     @media (max-width: 768px) {
       .about-content {
         flex-direction: column;
-      }
-
-      .read-more-button {
-        position: relative;
-        left: 0;
-        transform: none;
-        bottom: 0;
-        margin-top: 20px;
       }
     }
   </style>
@@ -491,7 +485,7 @@
       <div class="nav-links">
         <a href="https://marijnbransen1998.github.io/portfolio-pauline/">Home</a>
         <a href="https://marijnbransen1998.github.io/portfolio-pauline/portfolio.html">Portfolio</a>
-        <a href="https://marijnbransen1998.github.io/portfolio-pauline/about.html">About</a>
+        <a href="https://marijnbransen1998.github.io/portfolio-pauline/#about">About</a>
         <a href="https://marijnbransen1998.github.io/portfolio-pauline/connect.html">Let's Connect</a>
       </div>
     </nav>
@@ -508,9 +502,9 @@
         <div class="three-d-face face6"></div>
       </div>
       <div class="hero-content">
-        <h1 style="color: white;">Pauline Laurent</h1>
-        <p style="color: white;">Elevating brands through strategic influence and innovative PR solutions</p>
-        <a href="https://marijnbransen1998.github.io/portfolio-pauline/connect.html" class="cta-button" style="background-color: black; color: beige; border: 2px solid white; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='beige'; this.style.color='black';" onmouseout="this.style.backgroundColor='black'; this.style.color='beige';">Let's Collaborate</a>
+        <h1 style="color: var(--bg);">Pauline Laurent</h1>
+        <p style="color: var(--bg);">Elevating brands through strategic influence and innovative PR solutions</p>
+        <a href="https://marijnbransen1998.github.io/portfolio-pauline/connect.html" class="cta-button" style="background-color: var(--bg); color: var(--primary); border: 2px solid white; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='var(--primary)'; this.style.color='var(--bg)';" onmouseout="this.style.backgroundColor='var(--bg)'; this.style.color='var(--primary)';">Let's Collaborate</a>
       </div>
     </section>
 
@@ -524,8 +518,8 @@
           <p>Pauline Laurent is a dynamic and innovative PR specialist and influencer marketing expert with over a decade of experience in shaping brand narratives and driving impactful campaigns. Based in Paris but with a global reach, Pauline has worked with some of the world's most recognizable brands across fashion, technology, and lifestyle sectors.</p>
           <p>Known for her strategic thinking, creative approach, and ability to navigate the ever-changing digital landscape, Pauline has consistently delivered results that exceed client expectations. Her unique blend of traditional PR expertise and cutting-edge influencer marketing strategies has made her a sought-after consultant in the industry.</p>
           <p>When she's not crafting compelling brand stories or negotiating high-profile partnerships, Pauline enjoys travel photography, practicing yoga, and mentoring aspiring PR professionals. Her passion for communication, coupled with her deep understanding of consumer behavior and digital trends, continues to position her at the forefront of the PR and influencer marketing world.</p>
+          <a href="https://marijnbransen1998.github.io/portfolio-pauline/about.html" class="cta-button">Read More</a>
         </div>
-        <a href="https://marijnbransen1998.github.io/portfolio-pauline/about.html" class="read-more-button">Read More</a>
       </div>
     </section>
 
@@ -564,7 +558,7 @@
         </div>
       </div>
       <div style="text-align: center; margin-top: 40px;">
-        <a href="/all-projects" class="cta-button" style="background-color: black; color: beige; border: 2px solid white; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='beige'; this.style.color='black';" onmouseout="this.style.backgroundColor='black'; this.style.color='beige';">View All Projects</a>
+        <a href="/all-projects" class="cta-button">View All Projects</a>
       </div>
     </section>
 
@@ -659,7 +653,7 @@
           <div class="skill-card-inner">
             <div class="skill-card-front">
               <i class="fas fa-pencil-alt skill-icon"></i>
-              <h3 class="skill-name">Content Creation</h3>
+              <h3 class="skill-name">Content Creation</</i>
             </div>
             <div class="skill-card-back">
               <h4 class="skill-level">Advanced</h4>
