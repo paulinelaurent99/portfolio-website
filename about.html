@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="https://marijnbransen1998.github.io/portfolio-pauline/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Pauline Laurent</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+    :root {
+      --primary: #F5F5DC; /* Beige */
+      --secondary: #D2B48C; /* Darker beige for contrast */
+      --accent: #8B4513; /* Brown for accent */
+      --bg: #0A0A0A;
+      --text: #FFFFFF;
+      --text-shadow: 0 0 10px rgba(245, 245, 220, 0.7); /* Updated shadow color */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Bebas Neue', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background-color: rgba(10, 10, 10, 0.9);
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+      padding: 20px 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Bebas Neue', serif;
+      font-size: 2.5rem;
+      color: var(--text);
+      text-decoration: none;
+      text-shadow: var(--text-shadow);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+      text-shadow: 0 0 10px var(--accent);
+    }
+
+    .about {
+      padding: 100px 0;
+      background-color: rgba(245, 245, 220, 0.05);
+    }
+
+    .about-content {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .about-image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .about-image img {
+      max-width: 100%;
+      box-shadow: 0 0 20px rgba(245, 245, 220, 0.3);
+    }
+
+    .about-text {
+      flex: 2;
+    }
+
+    .about h2 {
+      font-family: 'Bebas Neue', serif;
+      font-size: 3rem;
+      margin-bottom: 30px;
+      color: var(--primary);
+    }
+
+    .about p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+
+    @media (max-width: 768px) {
+      .about-content {
+        flex-direction: column;
+      }
+    }
+
+    footer {
+      background-color: rgba(10, 10, 10, 0.9);
+      color: var(--text);
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 20px;
+    }
+
+    .social-links a {
+      color: var(--text);
+      font-size: 1.5rem;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: var(--accent);
+      transform: translateY(-5px);
+    }
+
+    .footer-text {
+      font-size: 0.9rem;
+      color: var(--primary);
+    }
+
+    .timeline-container {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .timeline {
+      position: relative;
+      margin: 0 auto;
+      padding: 40px 0;
+      width: 100%;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: var(--primary); /* Change line color to beige */
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+
+    .timeline-item {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .timeline-item::after {
+      content: ' ';
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      right: -12.5px;
+      background-color: white;
+      border: 4px solid var(--accent);
+      top: 20px;
+      border-radius: 50%;
+      z-index: 1;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .timeline-item.left {
+      left: 0;
+    }
+
+    .timeline-item.right {
+      left: 50%;
+    }
+
+    .timeline-item-content {
+      padding: 20px 30px;
+      background-color: white;
+      position: relative;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .timeline-item-content h3 {
+      font-size: 1.8rem;
+      color: var(--bg);
+      margin-bottom: 10px;
+    }
+
+    .timeline-item-content p {
+      font-size: 1.2rem;
+      color: var(--bg);
+    }
+
+    .timeline-item-content time {
+      display: block;
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      color: var(--secondary);
+    }
+
+    .timeline-item-content::after {
+      content: '';
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background-color: var(--accent);
+      top: 22px;
+      border-radius: 50%;
+      left: -7.5px;
+      z-index: -1;
+    }
+
+    .timeline-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .timeline-item:hover::after {
+      background-color: var(--secondary);
+      border-color: var(--secondary);
+    }
+
+    .timeline-item-content:hover {
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .timeline-item.right {
+        left: 0;
+      }
+
+      .timeline-item::after {
+        left: -12.5px;
+      }
+    }
+
+    /* Animations */
+    .timeline-item-content {
+      animation: fadeIn 1s ease-in-out both;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a href="https://marijnbransen1998.github.io/portfolio-pauline/" class="logo">PL</a>
+      <div class="nav-links">
+        <a href="https://marijnbransen1998.github.io/portfolio-pauline/">Home</a>
+        <a href="https://marijnbransen1998.github.io/portfolio-pauline/portfolio.html">Portfolio</a>
+        <a href="https://marijnbransen1998.github.io/portfolio-pauline/about.html">About</a>
+        <a href="https://marijnbransen1998.github.io/portfolio-pauline/connect.html">Let's Connect</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="about container">
+      <div class="about-content">
+        <div class="about-image">
+          <img src="pauline-linkedin.webp" alt="Pauline Laurent" width="400" height="400">
+        </div>
+        <div class="about-text">
+          <h2>About Pauline</h2>
+          <p>Pauline Laurent is a dynamic and innovative PR specialist and influencer marketing expert with over a decade of experience in shaping brand narratives and driving impactful campaigns. Based in Paris but with a global reach, Pauline has worked with some of the world's most recognizable brands across fashion, technology, and lifestyle sectors.</p>
+          <p>Known for her strategic thinking, creative approach, and ability to navigate the ever-changing digital landscape, Pauline has consistently delivered results that exceed client expectations. Her unique blend of traditional PR expertise and cutting-edge influencer marketing strategies has made her a sought-after consultant in the industry.</p>
+          <p>When she's not crafting compelling brand stories or negotiating high-profile partnerships, Pauline enjoys travel photography, practicing yoga, and mentoring aspiring PR professionals. Her passion for communication, coupled with her deep understanding of consumer behavior and digital trends, continues to position her at the forefront of the PR and influencer marketing world.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="timeline-container">
+      <h2 style="text-align: center; color: var(--primary); font-size: 3rem; margin-bottom: 50px;">Career Timeline</h2>
+      <div class="timeline">
+          <div class="timeline-item left">
+              <div class="timeline-item-content">
+                  <time>Oct. 2023 - Present</time>
+                  <h3>Pascale Venot Bureau de Presse</h3>
+                  <p>Influence Project Manager<br>
+                  - Development and execution of influence strategies, including profile identification and campaign management.<br>
+                  - Organization of influencer events, negotiation of influencer contracts, and creation of detailed post-campaign reports.<br>
+                  - Talent Management: Implemented social media strategy and managed brand collaborations for a famous AI influencer.<br>
+                  - Marketing: Developed and implemented Deliveroo France marketing strategy, organized shootings, co-created products, and managed retro planning and budget.
+                  </p>
+                  <p><strong>Clients:</strong> Yannick Alléno***, Michel Kayser**, Coca Cola, Accor Group (TOO Hôtel, Pullman Tour Eiffel), Highstay Paris, Wonderbox, Arcadys Group (Artisan de la Truffe, Astara), Gamm Vert, Noti Club, La Bohème Montmartre.</p>
+              </div>
+          </div>
+
+          <div class="timeline-item right">
+              <div class="timeline-item-content">
+                  <time>Aug. 2022 - Oct. 2023</time>
+                  <h3>Press and Influence Officer</h3>
+                  <p>- Creation of strategic recommendations.<br>
+                  - Setting up partnerships and co-brandings.<br>
+                  - Organization of influence events.<br>
+                  - Post-campaign qualitative and quantitative reporting.
+                  </p>
+                  <p><strong>Clients:</strong> Giuseppe Cutraro, Chef Akrame, Bo Concept, Bivouak Beach Club, Restaurant Salvaje Paris, Pokawa.</p>
+              </div>
+          </div>
+
+          <div class="timeline-item left">
+              <div class="timeline-item-content">
+                  <time>Sep. 2020 - Jan. 2021</time>
+                  <h3>Blush Concept Store (Internship)</h3>
+                  <p>- Participation in the development of the e-commerce site.<br>
+                  - Revamping the blog and writing articles.<br>
+                  - Writing and layout of newsletters.<br>
+                  - Daily use of Photoshop and Indesign.<br>
+                  - Shooting products in a photo booth.<br>
+                  - Creation of a Pinterest account.<br>
+                  - Community management for Instagram and Facebook.<br>
+                  - SEO/SEA referencing.<br>
+                  - Internet order management and customer relations.<br>
+                  - Press review.
+                  </p>
+              </div>
+          </div>
+
+          <div class="timeline-item right">
+              <div class="timeline-item-content">
+                  <time>Jan. 2020 - Apr. 2020</time>
+                  <h3>AXA (Internship)</h3>
+                  <p>Internal Communications and Events Officer<br>
+                  - Participation in the Energy Tour and other events.<br>
+                  - Production of short films and interviews with directors.<br>
+                  - Writing articles for the AXA France website.<br>
+                  - Organization of events for the AXA Atout Coeur association.
+                  </p>
+              </div>
+          </div>
+
+          <div class="timeline-item left">
+              <div class="timeline-item-content">
+                  <time>Apr. 2019 - Jun. 2019</time>
+                  <h3>Office National des Forêts (Internship)</h3>
+                  <p>Corporate Communications Assistant<br>
+                  - Attendance and organization of activities at the Biodiversity Days.<br>
+                  - Contact with regional journalists for article writing.<br>
+                  - Regular press reviews.
+                  </p>
+              </div>
+          </div>
+      </div>
+
+      <h2 style="text-align: center; color: var(--primary); font-size: 3rem; margin-bottom: 50px;">Education Timeline</h2>
+      <div class="timeline">
+          <div class="timeline-item left">
+              <div class="timeline-item-content">
+                  <time>Jul. 2022 - Oct. 2023</time>
+                  <h3>MBA Specialized in Digital Marketing & Business</h3>
+                  <p>EFAP - School of new communication professions</p>
+              </div>
+          </div>
+
+          <div class="timeline-item right">
+              <div class="timeline-item-content">
+                  <time>2018 - 2023</time>
+                  <h3>Master of Business Administration - MBA, Communication</h3>
+                  <p>EFAP - School of new communication professions</p>
+              </div>
+          </div>
+
+          <div class="timeline-item left">
+              <div class="timeline-item-content">
+                  <time>Feb. 2022 - Jul. 2022</time>
+                  <h3>Courses in Communication and Media</h3>
+                  <p>Budapest Metropolitan University</p>
+              </div>
+          </div>
+
+          <div class="timeline-item right">
+              <div class="timeline-item-content">
+                  <time>2017 - 2018</time>
+                  <h3>Preparatory Class for IEP Entrance Exam</h3>
+                  <p>History, General Culture, English...</p>
+              </div>
+          </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="social-links">
+        <a href="https://www.instagram.com/paaulinelaurent/?igsh=MXRjMzVyanp3b21wcw%3D%3D" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/paulinelaurentdigital/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <p class="footer-text">© 2023 Pauline Laurent. Elevating Brands, Inspiring Influence.</p>
+    </div>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</body>
+</html>
