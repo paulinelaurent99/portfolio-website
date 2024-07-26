@@ -15,6 +15,7 @@
       --bg: #0A0A0A;
       --text: #FFFFFF;
       --text-shadow: 0 0 10px rgba(245, 245, 220, 0.7); /* Updated shadow color */
+      --icon-bg: #8B7D6B; /* Dark taupe for icon background */
     }
 
     * {
@@ -73,8 +74,8 @@
     }
 
     .nav-links a:hover {
-      color: var(--accent);
-      text-shadow: 0 0 10px var(--accent);
+      color: var(--primary); /* Change hover color to beige */
+      text-shadow: 0 0 10px var(--primary); /* Change text shadow to beige */
     }
 
     .connect-section {
@@ -146,7 +147,7 @@
       width: 100px;
       height: 100px;
       border-radius: 50%;
-      background-color: var(--accent);
+      background-color: var(--icon-bg); /* Changed background color to dark taupe */
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       position: relative;
       overflow: hidden;
@@ -171,8 +172,8 @@
 
     .connect-btn {
       padding: 15px 30px;
-      background-color: var(--button-bg);
-      color: var(--button-text);
+      background-color: var(--text); /* Changed button color to white */
+      color: var(--bg); /* Changed text color to black */
       border: none;
       border-radius: 30px;
       font-weight: 700;
@@ -205,7 +206,7 @@
     }
 
     .connect-btn:hover {
-      background-color: var(--accent);
+      background-color: var(--primary); /* Change button color to beige on hover */
       color: var(--bg);
       transform: translateY(-3px);
       box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
