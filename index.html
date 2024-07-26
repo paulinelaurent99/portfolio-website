@@ -97,14 +97,14 @@
       font-size: 4rem;
       margin-bottom: 20px;
       text-shadow: var(--text-shadow);
-      color: var (--bg); /* Changed to dark color for contrast */
+      color: var(--bg); /* Changed to dark color for contrast */
     }
 
     .hero p {
       font-size: 1.5rem;
       max-width: 600px;
       margin: 0 auto 30px;
-      color: var (--bg); /* Changed to dark color for contrast */
+      color: var(--bg); /* Changed to dark color for contrast */
     }
 
     .cta-button {
@@ -508,7 +508,7 @@
           <div class="project-content">
             <h3>Luxury Brand Collaboration</h3>
             <p>Orchestrated a game-changing partnership between a high-end fashion house and a sustainable tech startup, resulting in a 200% increase in brand awareness and a 150% boost in sales.</p>
-            <a href="/project/luxury-brand-collab" class="cta-button">View Project</a>
+            <a href="/project/luxury-brand-collab" class="cta-button" style="background-color: black; color: beige; border: 2px solid white; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='beige'; this.style.color='black';" onmouseout="this.style.backgroundColor='black'; this.style.color='beige';">View Project</a>
           </div>
         </div>
         <div class="project-item">
@@ -518,7 +518,7 @@
           <div class="project-content">
             <h3>Global Product Launch</h3>
             <p>Spearheaded a multi-channel campaign for a revolutionary eco-friendly product, reaching 50 million people across 20 countries and securing coverage in top-tier media outlets.</p>
-            <a href="/project/global-product-launch" class="cta-button">View Project</a>
+            <a href="/project/global-product-launch" class="cta-button" style="background-color: black; color: beige; border: 2px solid white; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='beige'; this.style.color='black';" onmouseout="this.style.backgroundColor='black'; this.style.color='beige';">View Project</a>
           </div>
         </div>
         <div class="project-item">
@@ -528,12 +528,12 @@
           <div class="project-content">
             <h3>Tech Giant Crisis Management</h3>
             <p>Successfully navigated a potential PR disaster for a Fortune 500 tech company, transforming negative sentiment into positive brand reinforcement through strategic communication and media relations.</p>
-            <a href="/project/crisis-management" class="cta-button">View Project</a>
+            <a href="/project/crisis-management" class="cta-button" style="background-color: black; color: beige; border: 2px solid white; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='beige'; this.style.color='black';" onmouseout="this.style.backgroundColor='black'; this.style.color='beige';">View Project</a>
           </div>
         </div>
       </div>
       <div style="text-align: center; margin-top: 40px;">
-        <a href="/all-projects" class="cta-button" style="background-color: #F5F5DC; color: #0A0A0A; border: 2px solid #8B4513; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#D2B48C'; this.style.color='#0A0A0A';" onmouseout="this.style.backgroundColor='#F5F5DC'; this.style.color='#0A0A0A';">View All Projects</a>
+        <a href="/all-projects" class="cta-button" style="background-color: black; color: beige; border: 2px solid white; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='beige'; this.style.color='black';" onmouseout="this.style.backgroundColor='black'; this.style.color='beige';">View All Projects</a>
       </div>
     </section>
 
@@ -745,7 +745,7 @@
       const bars = document.querySelectorAll(selector);
       bars.forEach(bar => {
         const progress = bar.getAttribute('data-progress');
-        bar.style.width = ${progress}%;
+        bar.style.width = `${progress}%`;
       });
     }
 
