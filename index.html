@@ -475,6 +475,54 @@
       .about-content {
         flex-direction: column;
       }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .services-grid, .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services h2, .skills h2, .languages h2 {
+        font-size: 2rem;
+      }
+
+      .cta-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 0.9rem;
+      }
+
+      .about h2, .services h2, .skills h2, .languages h2 {
+        font-size: 1.8rem;
+      }
+
+      .cta-button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+      }
+
+      .skills, .languages {
+        padding: 50px 0;
+      }
+
+      .skill-card {
+        height: 250px;
+      }
     }
   </style>
 </head>
@@ -653,7 +701,7 @@
           <div class="skill-card-inner">
             <div class="skill-card-front">
               <i class="fas fa-pencil-alt skill-icon"></i>
-              <h3 class="skill-name">Content Creation</</i>
+              <h3 class="skill-name">Content Creation</h3>
             </div>
             <div class="skill-card-back">
               <h4 class="skill-level">Advanced</h4>
