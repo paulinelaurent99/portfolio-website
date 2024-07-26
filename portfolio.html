@@ -1,195 +1,201 @@
-<html><head><base href="https://marijnbransen1998.github.io/portfolio-pauline/">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pauline Laurent - Portfolio</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@400;700&family=Bebas+Neue&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="https://marijnbransen1998.github.io/portfolio-pauline/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pauline Laurent - Portfolio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-  :root {
-    --primary: #F5F5DC;
-    --secondary: #D2B48C;
-    --accent: #8B4513;
-    --bg: #0A0A0A;
-    --text: #FFFFFF;
-    --text-shadow: 0 0 10px rgba(245, 245, 220, 0.7);
-  }
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-  }
-
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-
-  header {
-    background-color: rgba(10, 10, 10, 0.9);
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    padding: 20px 0;
-  }
-
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    color: var(--text);
-    text-decoration: none;
-    text-shadow: var(--text-shadow);
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 30px;
-  }
-
-  .nav-links a {
-    color: var(--text);
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
-  }
-
-  .nav-links a:hover {
-    color: var(--accent);
-  }
-
-  .portfolio-header {
-    background: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-  }
-
-  .portfolio-header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(10, 10, 10, 0.7);
-  }
-
-  .portfolio-header h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 4rem;
-    color: beige;
-    text-shadow: var(--text-shadow);
-    position: relative;
-    z-index: 1;
-  }
-
-  .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    padding: 80px 0;
-  }
-
-  .portfolio-item {
-    background-color: rgba(245, 245, 220, 0.05);
-    border-radius: 15px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .portfolio-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(245, 245, 220, 0.2);
-  }
-
-  .portfolio-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-
-  .portfolio-item-content {
-    padding: 20px;
-  }
-
-  .portfolio-item h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: var(--primary);
-  }
-
-  .portfolio-item p {
-    margin-bottom: 15px;
-  }
-
-  .portfolio-item .read-more {
-    display: inline-block;
-    background-color: white;
-    color: black;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-
-  .portfolio-item .read-more:hover {
-    background-color: beige;
-    color: black;
-  }
-
-  footer {
-    background-color: rgba(10, 10, 10, 0.9);
-    padding: 40px 0;
-    text-align: center;
-  }
-
-  .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 20px;
-  }
-
-  .social-links a {
-    color: var(--text);
-    font-size: 1.5rem;
-    transition: color 0.3s ease;
-  }
-
-  .social-links a:hover {
-    color: var(--accent);
-  }
-
-  .footer-text {
-    font-size: 0.9rem;
-    color: var(--primary);
-  }
-
-  @media (max-width: 768px) {
-    .portfolio-header h1 {
-      font-size: 3rem;
+    :root {
+      --primary: #F5F5DC; /* Beige */
+      --secondary: #D2B48C; /* Darker beige for contrast */
+      --accent: #8B4513; /* Brown for accent */
+      --bg: #0A0A0A;
+      --text: #FFFFFF;
+      --text-shadow: 0 0 10px rgba(245, 245, 220, 0.7); /* Updated shadow color */
     }
-  }
-</style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Bebas Neue', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background-color: rgba(10, 10, 10, 0.9);
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+      padding: 20px 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Bebas Neue', serif;
+      font-size: 2.5rem;
+      color: var(--text);
+      text-decoration: none;
+      text-shadow: var(--text-shadow);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+      text-shadow: 0 0 10px var(--accent);
+    }
+
+    .portfolio-header {
+      background: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .portfolio-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(10, 10, 10, 0.7);
+    }
+
+    .portfolio-header h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 4rem;
+      color: var(--primary);
+      text-shadow: var(--text-shadow);
+      position: relative;
+      z-index: 1;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 80px 0;
+    }
+
+    .portfolio-item {
+      background-color: rgba(245, 245, 220, 0.05);
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(245, 245, 220, 0.2);
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .portfolio-item-content {
+      padding: 20px;
+    }
+
+    .portfolio-item h3 {
+      font-family: 'Bebas Neue', serif;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+
+    .portfolio-item p {
+      margin-bottom: 15px;
+      color: var(--text);
+    }
+
+    .portfolio-item .read-more {
+      display: inline-block;
+      background-color: white;
+      color: black;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .portfolio-item .read-more:hover {
+      background-color: beige;
+      color: black;
+    }
+
+    footer {
+      background-color: rgba(10, 10, 10, 0.9);
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 20px;
+    }
+
+    .social-links a {
+      color: var(--text);
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: var(--accent);
+    }
+
+    .footer-text {
+      font-size: 0.9rem;
+      color: var(--primary);
+    }
+
+    @media (max-width: 768px) {
+      .portfolio-header h1 {
+        font-size: 3rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -258,6 +264,22 @@
           <a href="#" class="read-more">Read More</a>
         </div>
       </div>
+      <div class="portfolio-item">
+        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Social Media Strategy for E-commerce" width="300" height="200">
+        <div class="portfolio-item-content">
+          <h3>Social Media Strategy for E-commerce</h3>
+          <p>Designed and executed a comprehensive social media strategy for a leading e-commerce platform, resulting in increased engagement and a 20% boost in sales.</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://images.unsplash.com/photo-1524777312122-4847b8c7d829?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Brand Partnership Campaign" width="300" height="200">
+        <div class="portfolio-item-content">
+          <h3>Brand Partnership Campaign</h3>
+          <p>Collaborated with a global brand to create and launch a successful partnership campaign, leveraging influencer marketing to reach a broader audience.</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -272,4 +294,5 @@
   </footer>
 
   <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
-</body></html>
+</body>
+</html>
