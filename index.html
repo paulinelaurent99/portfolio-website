@@ -97,14 +97,14 @@
       font-size: 4rem;
       margin-bottom: 20px;
       text-shadow: var(--text-shadow);
-      color: var(--bg); /* Changed to dark color for contrast */
+      color: var (--bg); /* Changed to dark color for contrast */
     }
 
     .hero p {
       font-size: 1.5rem;
       max-width: 600px;
       margin: 0 auto 30px;
-      color: var(--bg); /* Changed to dark color for contrast */
+      color: var (--bg); /* Changed to dark color for contrast */
     }
 
     .cta-button {
@@ -418,6 +418,7 @@
       display: flex;
       align-items: center;
       gap: 50px;
+      position: relative;
     }
 
     .about-image {
@@ -447,9 +448,38 @@
       color: var(--text);
     }
 
+    .read-more-button {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: black;
+      color: beige;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      border: 2px solid white;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -50px;
+    }
+
+    .read-more-button:hover {
+      background-color: beige;
+      color: black;
+    }
+
     @media (max-width: 768px) {
       .about-content {
         flex-direction: column;
+      }
+
+      .read-more-button {
+        position: relative;
+        left: 0;
+        transform: none;
+        bottom: 0;
+        margin-top: 20px;
       }
     }
   </style>
@@ -461,7 +491,7 @@
       <div class="nav-links">
         <a href="https://marijnbransen1998.github.io/portfolio-pauline/">Home</a>
         <a href="https://marijnbransen1998.github.io/portfolio-pauline/portfolio.html">Portfolio</a>
-        <a href="https://marijnbransen1998.github.io/portfolio-pauline/about.html">About</a>
+        <a href="https://marijnbransen1998.github.io/portfolio-pauline/#about">About</a>
         <a href="https://marijnbransen1998.github.io/portfolio-pauline/connect.html">Let's Connect</a>
       </div>
     </nav>
@@ -495,6 +525,7 @@
           <p>Known for her strategic thinking, creative approach, and ability to navigate the ever-changing digital landscape, Pauline has consistently delivered results that exceed client expectations. Her unique blend of traditional PR expertise and cutting-edge influencer marketing strategies has made her a sought-after consultant in the industry.</p>
           <p>When she's not crafting compelling brand stories or negotiating high-profile partnerships, Pauline enjoys travel photography, practicing yoga, and mentoring aspiring PR professionals. Her passion for communication, coupled with her deep understanding of consumer behavior and digital trends, continues to position her at the forefront of the PR and influencer marketing world.</p>
         </div>
+        <a href="https://marijnbransen1998.github.io/portfolio-pauline/about.html" class="read-more-button">Read More</a>
       </div>
     </section>
 
@@ -508,7 +539,7 @@
           <div class="project-content">
             <h3>Luxury Brand Collaboration</h3>
             <p>Orchestrated a game-changing partnership between a high-end fashion house and a sustainable tech startup, resulting in a 200% increase in brand awareness and a 150% boost in sales.</p>
-            <a href="/project/luxury-brand-collab" class="cta-button" style="background-color: black; color: beige; border: 2px solid white; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='beige'; this.style.color='black';" onmouseout="this.style.backgroundColor='black'; this.style.color='beige';">View Project</a>
+            <a href="/project/luxury-brand-collab" class="cta-button">View Project</a>
           </div>
         </div>
         <div class="project-item">
@@ -518,7 +549,7 @@
           <div class="project-content">
             <h3>Global Product Launch</h3>
             <p>Spearheaded a multi-channel campaign for a revolutionary eco-friendly product, reaching 50 million people across 20 countries and securing coverage in top-tier media outlets.</p>
-            <a href="/project/global-product-launch" class="cta-button" style="background-color: black; color: beige; border: 2px solid white; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='beige'; this.style.color='black';" onmouseout="this.style.backgroundColor='black'; this.style.color='beige';">View Project</a>
+            <a href="/project/global-product-launch" class="cta-button">View Project</a>
           </div>
         </div>
         <div class="project-item">
@@ -528,7 +559,7 @@
           <div class="project-content">
             <h3>Tech Giant Crisis Management</h3>
             <p>Successfully navigated a potential PR disaster for a Fortune 500 tech company, transforming negative sentiment into positive brand reinforcement through strategic communication and media relations.</p>
-            <a href="/project/crisis-management" class="cta-button" style="background-color: black; color: beige; border: 2px solid white; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='beige'; this.style.color='black';" onmouseout="this.style.backgroundColor='black'; this.style.color='beige';">View Project</a>
+            <a href="/project/crisis-management" class="cta-button">View Project</a>
           </div>
         </div>
       </div>
