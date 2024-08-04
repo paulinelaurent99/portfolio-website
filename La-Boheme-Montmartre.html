@@ -86,7 +86,7 @@
 
         .project-header {
             background: url('BOHEME BRAND.jpeg') center/cover no-repeat;
-            height: 60vh;
+            height: 70vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -163,6 +163,25 @@
             height: auto;
             border-radius: 10px;
             margin-bottom: 20px;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding-top: 50%;
+            /* Aspect ratio for the video */
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .project-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
         }
 
         .testimonial {
@@ -303,8 +322,13 @@
                 <p>La Boheme Montmartre, a historic French institution known for hosting artists like Monet and Van Gogh,
                     sought to promote their new apartments with a cinematic portrayal of life in Montmartre during the
                     Olympic Games. The film aimed to capture the essence of the area and its cultural heritage.</p>
-                <img src="EVENT_compressed.jpg" alt="Event Image" class="project-image"
-                    style="max-width: 40%; display: block;">
+                <!-- Responsive video container -->
+                <div class="video-container">
+                    <video controls class="project-video">
+                        <source src="BOHEME PROJECT.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </section>
 
             <section class="project-section">
