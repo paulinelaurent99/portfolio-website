@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <base href="https://marijnbransen1998.github.io/portfolio-pauline/">
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
     :root {
-      --primary: #F5F5DC; /* Changed to beige */
+      --primary: #F5F5DC; /* Beige */
       --secondary: #D2B48C; /* Darker beige for contrast */
       --accent: #8B4513; /* Brown for accent */
       --bg: #0A0A0A;
@@ -138,35 +138,76 @@
       color: var(--primary);
     }
 
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 40px;
+    /* Carousel Styles */
+    .portfolio-carousel {
+      overflow: hidden;
+      position: relative;
     }
 
-    .service-item {
-      background-color: rgba(245, 245, 220, 0.05);
-      padding: 30px;
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .carousel-item {
+      flex: 1 0 33.33%; /* Show 3 items at a time */
+      max-width: 33.33%;
+      box-sizing: border-box;
+      padding: 0 10px;
+    }
+
+    .carousel-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
       border-radius: 15px;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .service-item:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(245, 245, 220, 0.2);
-    }
-
-    .service-item i {
-      font-size: 3rem;
-      color: var(--accent);
-      margin-bottom: 20px;
-    }
-
-    .service-item h3 {
-      font-size: 1.5rem;
       margin-bottom: 15px;
+    }
+
+    .carousel-item h3 {
+      font-size: 1.5rem;
       color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .carousel-item p {
+      color: var(--text);
+      margin-bottom: 15px;
+    }
+
+    .carousel-item a {
+      display: inline-block;
+      background-color: white;
+      color: black;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .carousel-item a:hover {
+      background-color: beige;
+      color: black;
+    }
+
+    .carousel-indicators {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .carousel-indicator {
+      width: 10px;
+      height: 10px;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      margin: 0 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .carousel-indicator.active {
+      background-color: var(--primary);
     }
 
     /* Enhanced Animated Skills and Languages Sections */
@@ -573,36 +614,59 @@
 
     <section class="services container">
       <h2>Portfolio</h2>
-      <div class="services-grid">
-        <div class="project-item">
-          <div class="project-image">
-            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1740&amp;q=80" alt="Luxury brand collaboration project" width="400" height="300">
+      <div class="portfolio-carousel">
+        <div class="carousel-track">
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1471&amp;q=80" alt="BoConcept: Influencer Campaign">
+            <h3>BoConcept: Influencer Campaign</h3>
+            <p>Orchestrated a comprehensive PR and influencer marketing campaign for a cutting-edge AI startup, resulting in widespread media coverage and a successful Series A funding round.</p>
+            <a href="BoConcept.html" class="read-more">Read More</a>
           </div>
-          <div class="project-content">
-            <h3>Luxury Brand Collaboration</h3>
-            <p>Orchestrated a game-changing partnership between a high-end fashion house and a sustainable tech startup, resulting in a 200% increase in brand awareness and a 150% boost in sales.</p>
-            <a href="/project/luxury-brand-collab" class="cta-button">View Project</a>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1603400521630-9f2de124b33b?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=687&amp;q=80" alt="La-Boheme-Montmartre: Influencer Campaign">
+            <h3>La-Boheme-Montmartre: Influencer Campaign</h3>
+            <p>Led the strategic rebranding and PR efforts for a heritage luxury fashion house, revitalizing its image and appealing to a younger demographic while maintaining brand prestige.</p>
+            <a href="La-Boheme-Montmartre.html" class="read-more">Read More</a>
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1501597301489-8b75b675ba0a?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=687&amp;q=80" alt="Sustainable Beauty Campaign">
+            <h3>Sustainable Beauty Campaign</h3>
+            <p>Developed and executed a multi-channel campaign for a clean beauty brand, highlighting its commitment to sustainability and ethical production practices.</p>
+            <a href="Sustainable-Beauty.html" class="read-more">Read More</a>
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1559523161-0fc0d8b38a7a?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=687&amp;q=80" alt="Global Food Festival PR">
+            <h3>Global Food Festival PR</h3>
+            <p>Managed media relations and influencer engagement for an international food festival, resulting in sold-out events and features in top-tier culinary publications.</p>
+            <a href="coca-cola-food-festival-launch.html" class="read-more">Read More</a>
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1559523275-75021dde549c?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=688&amp;q=80" alt="Travel App Launch">
+            <h3>Travel App Launch</h3>
+            <p>Spearheaded the PR strategy for a revolutionary travel app, securing partnerships with travel influencers and generating buzz through creative social media campaigns.</p>
+            <a href="Travel-App.html" class="read-more">Read More</a>
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1551817958-d9d86fb29431?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80" alt="Crisis Management for Tech Giant">
+            <h3>Crisis Management for Tech Giant</h3>
+            <p>Successfully navigated a major PR crisis for a leading tech company, implementing a strategic communication plan that mitigated reputational damage and rebuilt public trust.</p>
+            <a href="Crisis-Management.html" class="read-more">Read More</a>
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Social Media Strategy for E-commerce">
+            <h3>Social Media Strategy for E-commerce</h3>
+            <p>Designed and executed a comprehensive social media strategy for a leading e-commerce platform, resulting in increased engagement and a 20% boost in sales.</p>
+            <a href="Social-Media-Strategy.html" class="read-more">Read More</a>
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1524777312122-4847b8c7d829?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Brand Partnership Campaign">
+            <h3>Brand Partnership Campaign</h3>
+            <p>Collaborated with a global brand to create and launch a successful partnership campaign, leveraging influencer marketing to reach a broader audience.</p>
+            <a href="Brand-Partnership.html" class="read-more">Read More</a>
           </div>
         </div>
-        <div class="project-item">
-          <div class="project-image">
-            <img src="https://images.unsplash.com/photo-1551150441-3f3828204ef1?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1740&amp;q=80" alt="Global product launch campaign" width="400" height="300">
-          </div>
-          <div class="project-content">
-            <h3>Global Product Launch</h3>
-            <p>Spearheaded a multi-channel campaign for a revolutionary eco-friendly product, reaching 50 million people across 20 countries and securing coverage in top-tier media outlets.</p>
-            <a href="/project/global-product-launch" class="cta-button">View Project</a>
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-image">
-            <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1740&amp;q=80" alt="Crisis management for tech giant" width="400" height="300">
-          </div>
-          <div class="project-content">
-            <h3>Tech Giant Crisis Management</h3>
-            <p>Successfully navigated a potential PR disaster for a Fortune 500 tech company, transforming negative sentiment into positive brand reinforcement through strategic communication and media relations.</p>
-            <a href="/project/crisis-management" class="cta-button">View Project</a>
-          </div>
+        <div class="carousel-indicators">
+          <!-- Indicators will be dynamically added here -->
         </div>
       </div>
       <div style="text-align: center; margin-top: 40px;">
@@ -862,6 +926,67 @@
         bar.style.boxShadow = 'none';
       });
     });
+
+    // Carousel Functionality
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const indicatorsContainer = document.querySelector('.carousel-indicators');
+    const slideWidth = slides[0].getBoundingClientRect().width;
+
+    // Arrange the slides next to one another
+    const setSlidePosition = (slide, index) => {
+      slide.style.left = slideWidth * index + 'px';
+    };
+
+    slides.forEach(setSlidePosition);
+
+    const moveToSlide = (track, currentSlide, targetSlide) => {
+      track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+      currentSlide.classList.remove('current-slide');
+      targetSlide.classList.add('current-slide');
+    };
+
+    // Add indicators
+    slides.forEach((slide, index) => {
+      const indicator = document.createElement('div');
+      indicator.classList.add('carousel-indicator');
+      if (index === 0) indicator.classList.add('active');
+      indicator.setAttribute('data-slide-to', index);
+      indicatorsContainer.appendChild(indicator);
+    });
+
+    const indicators = Array.from(indicatorsContainer.children);
+
+    const updateIndicators = (currentIndicator, targetIndicator) => {
+      currentIndicator.classList.remove('active');
+      targetIndicator.classList.add('active');
+    };
+
+    const moveToNextSlide = () => {
+      const currentSlide = track.querySelector('.current-slide');
+      const nextSlide = currentSlide.nextElementSibling || slides[0];
+      const currentIndicator = indicatorsContainer.querySelector('.active');
+      const nextIndicator = currentIndicator.nextElementSibling || indicators[0];
+
+      moveToSlide(track, currentSlide, nextSlide);
+      updateIndicators(currentIndicator, nextIndicator);
+    };
+
+    indicatorsContainer.addEventListener('click', (e) => {
+      const targetIndicator = e.target.closest('div');
+      if (!targetIndicator) return;
+
+      const currentSlide = track.querySelector('.current-slide');
+      const currentIndicator = indicatorsContainer.querySelector('.active');
+      const targetIndex = indicators.findIndex(indicator => indicator === targetIndicator);
+      const targetSlide = slides[targetIndex];
+
+      moveToSlide(track, currentSlide, targetSlide);
+      updateIndicators(currentIndicator, targetIndicator);
+    });
+
+    // Auto-slide every 15 seconds
+    setInterval(moveToNextSlide, 15000);
   </script>
 </body>
 </html>
