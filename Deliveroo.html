@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="https://marijnbransen1998.github.io/portfolio-pauline/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deliveroo: Olympic Games Campaign - Pauline Laurent Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+        :root {
+            --primary: #F5F5DC;
+            /* Changed to beige */
+            --secondary: #D2B48C;
+            /* Darker beige for contrast */
+            --accent: #8B4513;
+            /* Brown for accent */
+            --bg: #0A0A0A;
+            --text: #FFFFFF;
+            --text-shadow: 0 0 10px rgba(245, 245, 220, 0.7);
+            /* Updated shadow color */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Bebas Neue', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: rgba(10, 10, 10, 0.9);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Bebas Neue', serif;
+            font-size: 2.5rem;
+            color: var(--text);
+            text-decoration: none;
+            text-shadow: var(--text-shadow);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+            /* Changed to beige */
+            text-shadow: 0 0 10px var(--primary);
+            /* Changed to beige */
+        }
+
+        .project-header {
+            background: url('https://images.unsplash.com/photo-1624517452488-04869289c4ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .project-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(10, 10, 10, 0.7);
+        }
+
+        .project-header h1 {
+            font-family: 'Bebas Neue', serif;
+            font-size: 3.5rem;
+            color: var(--primary);
+            text-shadow: var(--text-shadow);
+            position: relative;
+            z-index: 1;
+        }
+
+        .project-content {
+            padding: 80px 0;
+        }
+
+        .project-section {
+            margin-bottom: 60px;
+            text-align: left;
+        }
+
+        .project-section h2 {
+            font-family: 'Bebas Neue', serif;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .project-section p {
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            line-height: 1.8;
+        }
+
+        .project-section ul {
+            list-style-type: disc;
+            padding-left: 40px;
+            /* Add indentation for bullet points */
+            margin-left: 0;
+        }
+
+        .project-section li {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            margin: 10px 0;
+            text-align: left;
+        }
+
+        .project-section li strong {
+            font-weight: bold;
+            color: var(--accent);
+            /* Use accent color to stand out */
+        }
+
+        .project-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial {
+            background-color: rgba(245, 245, 220, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+
+        .testimonial p {
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .cta-section {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: var(--bg);
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 5px;
+            border: 2px solid white;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary);
+            color: var(--bg);
+            border-color: var(--bg);
+            transform: translateY(-5px);
+        }
+
+        footer {
+            background-color: rgba(10, 10, 10, 0.9);
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            color: var(--text);
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+        }
+
+        .footer-text {
+            font-size: 0.9rem;
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .project-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .project-section h2 {
+                font-size: 2rem;
+            }
+
+            .project-section p,
+            .project-section li {
+                font-size: 1.1rem;
+                /* Adjusted for smaller screens */
+            }
+
+            .cta-button {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .project-header h1 {
+                font-size: 2rem;
+            }
+
+            .project-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .project-section p,
+            .project-section li {
+                font-size: 1rem;
+                /* Further adjusted for very small screens */
+            }
+
+            .cta-button {
+                font-size: 0.9rem;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <a href="https://marijnbransen1998.github.io/portfolio-pauline/" class="logo">PL</a>
+            <div class="nav-links">
+                <a href="https://marijnbransen1998.github.io/portfolio-pauline/">Home</a>
+                <a href="https://marijnbransen1998.github.io/portfolio-pauline/portfolio.html">Portfolio</a>
+                <a href="https://marijnbransen1998.github.io/portfolio-pauline/about.html">About</a>
+                <a href="https://marijnbransen1998.github.io/portfolio-pauline/connect.html">Let's Connect</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-header">
+            <h1>Deliveroo: Olympic Games Campaign</h1>
+        </section>
+
+        <div class="container project-content">
+            <section class="project-section">
+                <h2>Project Overview</h2>
+                <p>As part of the Olympic Games in Paris, Deliveroo launched a campaign to enhance brand visibility by
+                    collaborating with two French athletes. The project focused on creating a signature dish designed
+                    for optimal performance before a competition.</p>
+                <svg width="100%" height="300" viewBox="0 0 800 300">
+                    <rect width="100%" height="100%" fill="#E61D2B" />
+                    <circle cx="400" cy="150" r="120" fill="#FFFFFF" />
+                    <path d="M280 150 Q 400 50, 520 150 T 760 150" fill="none" stroke="#FFFFFF" stroke-width="40" />
+                    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF"
+                        font-family="Arial, sans-serif" font-size="48" font-weight="bold">Deliveroo</text>
+                </svg>
+            </section>
+
+            <section class="project-section">
+                <h2>Main Tasks</h2>
+                <ul>
+                    <li><strong>Athlete Collaboration:</strong> Sourced and secured partnerships with two Olympic
+                        athletes.</li>
+                    <li><strong>Contract Negotiation:</strong> Negotiated terms and agreements with the athletes.</li>
+                    <li><strong>Content Production:</strong> Organized the content creation process, including shooting
+                        and recipe development.</li>
+                    <li><strong>Campaign Planning:</strong> Developed a comprehensive retro-planning schedule for content
+                        release.</li>
+                </ul>
+            </section>
+
+            <section class="project-section">
+                <h2>Results</h2>
+                <p>The campaign successfully leveraged the athletes' social media platforms, increasing Deliveroo's
+                    reach and engagement during the Olympic Games.</p>
+            </section>
+
+            <section class="cta-section">
+                <a href="https://marijnbransen1998.github.io/portfolio-pauline/portfolio.html" class="cta-button">See
+                    Other Projects</a>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.instagram.com/paaulinelaurent/?igsh=MXRjMzVyanp3b21wcw%3D%3D" target="_blank"
+                    rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/paulinelaurentdigital/" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-linkedin"></i></a>
+            </div>
+            <p class="footer-text">© 2023 Pauline Laurent. Elevating Brands, Inspiring Influence.</p>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
