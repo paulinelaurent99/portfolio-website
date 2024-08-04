@@ -85,8 +85,10 @@
         }
 
         .project-header {
+            /* Change to a more compatible image format like JPG or PNG */
             background: url('BO CONCEPT BRAND .jpg') center/cover no-repeat;
-            height: 60vh;
+            /* Adjust height to make it more visible */
+            height: 70vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -160,6 +162,13 @@
 
         .project-image {
             width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .project-video {
+            max-width: 100%;
             height: auto;
             border-radius: 10px;
             margin-bottom: 20px;
@@ -303,7 +312,11 @@
                 <p>BoConcept, a renowned Danish decoration brand, aimed to increase its notoriety in France through a
                     collaboration with a famous French TV presenter. The project involved the creation of a promotional
                     video showcasing the presenter decorating her new house with BoConcept products.</p>
-                <img src="BO CONCEPT COLLAB.mp4" alt="Event Image" class="project-image" style="max-width: 50%; display: block;">
+                <!-- Use the video tag for the video -->
+                <video controls class="project-video">
+                    <source src="BO CONCEPT COLLAB.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </section>
 
             <section class="project-section">
